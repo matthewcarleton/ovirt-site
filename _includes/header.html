@@ -1,7 +1,7 @@
 <div class="mk-wrapper">
     <section class="mk-masthead">
 <header class="mk-main-header">
-    <a href="" class="mk-main-header__brand">
+    <a href="{{ site.url }}" class="mk-main-header__brand">
         <svg version="1.1" viewBox="0 0 557 540" xmlns="http://www.w3.org/2000/svg">
           <g fill="none" fill-rule="evenodd">
             <g transform="translate(-1)" fill-rule="nonzero">
@@ -27,14 +27,16 @@
         </button>
         <ul id="main_nav" class="mk-main-nav">
           <li><a class="mk-main-nav__item" href="">community resources</a></li>
-          <li><a class="mk-main-nav__item" href="{{ site.baseurl }}/documentation/index.html">documentation</a></li>
+          <li><a class="mk-main-nav__item" href="{{ site.baseurl }}/documentation.html">documentation</a></li>
           <li><a class="mk-main-nav__item" href="">try it!</a></li>
         </ul>
       </nav>
   </header>
+  {% if page.url == "/" %}
   <div class="mk-masthead__content">
     <h1 class="mk-masthead__content__title mk-heading--2xl">Metal<sup>3</sup></h1>
     <h3 class="mk-masthead__content__sub-title mk-heading-lg">Bare metal host provisioning for Kubernetes</h3>
     <a href="#" class="mk-button mk-button--primary">Get Started with Metal Kubed</a>
   </div>
+  {% endif %}
 </section>
