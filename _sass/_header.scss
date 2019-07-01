@@ -140,7 +140,7 @@
     font-size: var(--mk--FontSize--lg);
     margin-top: var(--mk--spacer--md);
 
-    &:hover, &:focus, &:active {
+    &:hover, &:focus, &:active, .active & {
       color: var(--mk--Color--300);
       text-decoration: none;
     }

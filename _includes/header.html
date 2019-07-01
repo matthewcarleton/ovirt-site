@@ -1,7 +1,7 @@
 <div class="mk-wrapper">
     <section class="mk-masthead">
 <header class="mk-main-header">
-    <a href="{{ site.url }}" class="mk-main-header__brand">
+    <a href="/" class="mk-main-header__brand">
         <svg version="1.1" viewBox="0 0 557 540" xmlns="http://www.w3.org/2000/svg">
           <g fill="none" fill-rule="evenodd">
             <g transform="translate(-1)" fill-rule="nonzero">
@@ -26,9 +26,9 @@
           <span class="mk-main-header__toggle-text">menu</span>
         </button>
         <ul id="main_nav" class="mk-main-nav">
-          <li><a class="mk-main-nav__item" href="">community resources</a></li>
-          <li><a class="mk-main-nav__item" href="{{ site.baseurl }}/documentation.html">documentation</a></li>
-          <li><a class="mk-main-nav__item" href="">try it!</a></li>
+          <li {% if page.url == "/community-resources.html" %} class="active" {% endif %}><a class="mk-main-nav__item" href="{{ site.baseurl }}/community-resources.html">community resources</a></li>
+          <li {% if page.url == "/documentation.html" %} class="active" {% endif %}><a class="mk-main-nav__item" href="{{ site.baseurl }}/documentation.html">documentation</a></li>
+          <li {% if page.url == "/try-it.html" %} class="active" {% endif %}><a class="mk-main-nav__item" href="{{ site.baseurl }}/try-it.html">try it!</a></li>
         </ul>
       </nav>
   </header>
