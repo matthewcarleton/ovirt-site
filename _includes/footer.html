@@ -1,0 +1,29 @@
+</main>
+<footer class="mk-main-footer">
+  <p>&copy; 2019 metal3.io <a href="">Privacy Statement</a></p>
+</footer>
+</div><!--wrapper-->
+<script>
+var toggle = document.querySelector('#toggle');
+var menu = document.querySelector('#main_nav');
+var menuItems = document.querySelectorAll('#main_nav li a');
+
+toggle.addEventListener('click', function(){
+if (menu.classList.contains('is-active')) {
+  this.setAttribute('aria-expanded', 'false');
+  menu.classList.remove('is-active');
+} else {
+  menu.classList.add('is-active'); 
+  this.setAttribute('aria-expanded', 'true');
+  //menuItems[0].focus();
+}
+});
+</script>
+<script>
+window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+.mk-button {
+    font-size: var(--mk--FontSize--sm);
+    border-radius: var(--mk--BorderRadius);
+    padding: var(--mk--spacer--xs) var(--mk--spacer--sm);
+    line-height: var(--mk--LineHeight--lg);
+    font-weight: normal;
+    display: inline-block;
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+    }
+    &--primary {
+        background: var(--mk--BackgroundColor--100);
+        color: var(--mk--Color--400);
+        &:hover, &:active, &:focus {
+            background: var(--mk--BackgroundColor--150);
+        }
+    }
+
+    &--secondary {
+        background: transparent;
+        color: var(--mk--Color--500);
+        border: var(--mk--BorderWidth--sm) solid var(--mk--Color--500);
+        &:hover, &:active, &:focus {
+            border-color: var(--mk--BorderColor--150);
+            color: var(--mk--Color--600);
+        }
+    }
+
+}
