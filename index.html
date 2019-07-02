@@ -59,17 +59,11 @@ layout: default
     <a href="#" class="mk-homepage__header__link">blog</a>
 </header>
 <div class="mk-blog-highlights__wrapper">
-<a href="#" class="mk-blog-highlights__item">
-    <h3 class="mk-heading--lg mk-blog-highlights__title">Understanding the Cluster API</h3>
+{% for post in site.posts %}
+<a href="{{ post.url }}" class="mk-blog-highlights__item">
+    <h3 class="mk-heading--lg mk-blog-highlights__title">{{ post.title }}</h3>
     <time datetime="1999-12-23" class="mk-blog-highlights__timestamp">Tuesday, 31/12/1999</time>
 </a>
-<a href="#" class="mk-blog-highlights__item">
-    <h3 class="mk-heading--lg mk-blog-highlights__title">Getting started with bare metal host provisioning</h3>
-    <time datetime="1999-12-23" class="mk-blog-highlights__timestamp">Tuesday, 31/12/1999</time>
-</a>
-<a href="#" class="mk-blog-highlights__item">
-    <h3 class="mk-heading--lg mk-blog-highlights__title">Welcome to the new metalkubed site</h3>
-    <time datetime="1999-12-23" class="mk-blog-highlights__timestamp">Tuesday, 31/12/1999</time>
-</a>
+{% endfor %}
 </div>
 </aside>
