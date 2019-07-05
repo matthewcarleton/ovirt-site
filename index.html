@@ -29,40 +29,32 @@ layout: default
 <section class="mk-faqs mk-homepage-main__section">
 <header class="mk-homepage__header">
     <h2 class="mk-heading mk-heading--xl mk-m-border">FAQ</h2>
-    <a href="#" class="mk-homepage__header__link">Documentation</a>
+    <a href="{{ site.baseurl }}/documentation.html" class="mk-homepage__header__link">Documentation</a>
 </header>
 
-<dl class="mk-faqs__list">
-<dt>
-    <button class="mk-faqs__question" aria-expanded="true" aria-controls="faq1_desc">What are the differences between KNI deployment and UPI bare metal?</button>
-</dt>
-<dd class="mk-faqs__answer">
-    <p id="faq1_desc">
-    Here's a quickie answer to that question that someone who isn't me can take care of
-    Here's a <a href="#">link that the user can click on</a>
-    </p>
-</dd>
-<dt>
-<button class="mk-faqs__question" aria-expanded="false" aria-controls="faq2_desc">What are the differences between KNI deployment and UPI bare metal?</button>
-</dt>
-<dd class="mk-faqs__answer" style="display:none;">
-    <p id="faq2_desc">
-    Here's a quickie answer to that question that someone who isn't me can take care of
-    Here's a <a href="#">link that the user can click on</a>
-    </p>
-</dd>
-</dl>
+<div data-aria-faq data-multi data-transition data-default="none" id="accGen">
+	{% for post in site.categories.faqs %}
+	<h3 data-aria-faq-heading>
+		{{ post.title }}
+	</h3>
+	<div data-aria-faq-panel>
+		{{ post.content | strip_html | xml_escape | }}
+	</div>
+	{% endfor %}
+</div>
+
+
 </section>
 <aside class="mk-blog-highlights mk-homepage-main__section">
 <header class="mk-homepage__header">
     <h2 class="mk-heading mk-heading--xl mk-m-border">What's new?</h2>
-    <a href="#" class="mk-homepage__header__link">blog</a>
+    <a href="{{ site.baseurl }}/blog/index.html" class="mk-homepage__header__link">Blog</a>
 </header>
 <div class="mk-blog-highlights__wrapper">
-{% for post in site.posts %}
+{% for post in site.categories.blog %}
 <a href="{{ post.url }}" class="mk-blog-highlights__item">
     <h3 class="mk-heading--lg mk-blog-highlights__title">{{ post.title }}</h3>
-    <time datetime="1999-12-23" class="mk-blog-highlights__timestamp">Tuesday, 31/12/1999</time>
+    <time datetime="1999-12-23" class="mk-blog-highlights__timestamp">{{ post.date | date: "%A, %-d/%m/%Y" }}</time>
 </a>
 {% endfor %}
 </div>
