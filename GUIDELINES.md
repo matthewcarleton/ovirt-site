@@ -42,7 +42,7 @@ Please use the following as general guidelines on any kind of contents generated
 
 ### Blog Posts
 
-All Blog posts are located in the [_posts](/_posts/) directory, each entry is a Markdown file with extension *.md* or *.markdown*. For creating a blog post for [metal3.io ](https://metal3.io ), you need to complete the following steps:
+All Blog posts are located in the [blog/_posts](blog/_posts/) directory, and all FAQ posts in the [faqs/_posts](faqs_posts), on them, each entry is a Markdown file with extension *.md* or *.markdown*. For creating a blog post for [metal3.io ](https://metal3.io ), you need to complete the following steps.
 
 * Create a markdown file with the *YYYY-MM-DD-TITLE.markdown* naming convention
 * For the [Front Matter](https://jekyllrb.com/docs/front-matter/), you need to add the following:
