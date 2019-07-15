@@ -15,7 +15,7 @@ Please use the following as general guidelines on any kind of contents generated
   * file contents
   * console commands
   * ...
-  * Use the proper tag to let the renderer what type of contents your including in the block for syntax highlighting
+  * Use the proper tag to let the renderer know what type of contents your including in the block for syntax highlighting
 * Consistency is important, makes it easier for the reader to follow along, for instance:
   * If you're writing about something running on OCP, use `oc` consistently, don't mix it up with `kubectl`
   * If you add your shell prompt to your console blocks, add it always or don't, but don't do half/half
