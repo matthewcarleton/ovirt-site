@@ -17,14 +17,18 @@
     &__title {
       color: var(--mk--Color--300);
       font-weight: var(--mk--FontWeight--100);
+      font-size: var(--mk--FontSize--3xl);
       sup {
         margin-left: var(--mk--spacer--xs);
         font-size: var(--mk--FontSize--xl);
+        position: relative;
+        top: -14px;
       }
     }
     &__sub-title {
       color: var(--mk--Color--100);
       margin-top: var(--mk--spacer--xs);
+      font-size: var(--mk--FontSize--lg);
     }
     .mk-button {
       margin-top: var(--mk--spacer--md);
@@ -136,7 +140,7 @@
   &__item {
     display: inline-block;
     color: var(--mk--Color--200);
-    font-size: var(--mk--FontSize--lg);
+    font-size: var(--mk--FontSize--md);
     margin-top: var(--mk--spacer--md);
 
     &:hover, &:focus, &:active, .active & {

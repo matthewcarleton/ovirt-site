@@ -1,5 +1,5 @@
 .mk-button {
-    font-size: var(--mk--FontSize--sm);
+    font-size: var(--mk--FontSize--md);
     border-radius: var(--mk--BorderRadius);
     padding: var(--mk--spacer--xs) var(--mk--spacer--sm);
     line-height: var(--mk--LineHeight--lg);
@@ -13,16 +13,18 @@
         color: var(--mk--Color--400);
         &:hover, &:active, &:focus {
             background: var(--mk--BackgroundColor--150);
+            transform: scale(1.025);
         }
     }
 
     &--secondary {
         background: transparent;
         color: var(--mk--Color--500);
-        border: var(--mk--BorderWidth--sm) solid var(--mk--Color--500);
+        box-shadow: 0px 0px 0px var(--mk--BorderWidth--sm) var(--mk--BorderColor--150);
         &:hover, &:active, &:focus {
-            border-color: var(--mk--BorderColor--150);
+            border-color: transparent;
             color: var(--mk--Color--600);
+            box-shadow: 0px 0px 0px var(--mk--BorderWidth--md) var(--mk--BorderColor--150);
         }
     }
 
