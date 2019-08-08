@@ -1,5 +1,5 @@
 <div class="mk-wrapper">
-    <section class="mk-masthead">
+    <section class="mk-masthead{% if page.url == "/" %} mk-masthead--home{% else %} mk-masthead--sub{% endif %}">
 <header class="mk-main-header">
     <a href="/" class="mk-main-header__brand">
         <svg version="1.1" viewBox="0 0 557 540" xmlns="http://www.w3.org/2000/svg">
@@ -33,11 +33,3 @@
         </ul>
       </nav>
   </header>
-  {% if page.url == "/" %}
-  <div class="mk-masthead__content">
-    <h1 class="mk-masthead__content__title">Metal<sup>3</sup></h1>
-    <h3 class="mk-masthead__content__sub-title">Bare metal host provisioning for Kubernetes</h3>
-    <a href="#" class="mk-button mk-button--primary">Get Started with Metal Kubed</a>
-  </div>
-  {% endif %}
-</section>
