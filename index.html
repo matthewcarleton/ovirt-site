@@ -18,9 +18,9 @@ layout: default
         </p>
         <a href="#" class="mk-button mk-button--secondary">Join the Conversation</a>
 </section>
-<main class="mk-homepage-main">
-<section class="mk-why-metalkubed mk-homepage-main__section">
-   <header class="mk-homepage__header">
+<main class="mk-main mk-main--homepage">
+<section class="mk-why-metalkubed mk-main__section">
+   <header class="mk-main__header">
    <h2 class="mk-heading mk-heading--xl mk-m-border">Why Metal3.io?</h2>
    </header>
           <p>There are a number of great open source tools for bare metal host provisioning, including Ironic.
@@ -31,10 +31,10 @@ layout: default
           <p>The Metal3.io project is also building integration with the Kubernetes cluster-api project, allowing
           Metal3.io to be used as an infrastructure backend for Machine objects from the Cluster API.</p>
 </section>
-<section class="mk-faqs mk-homepage-main__section">
-<header class="mk-homepage__header">
+<section class="mk-faqs mk-main__section">
+<header class="mk-main__header">
     <h2 class="mk-heading mk-heading--xl mk-m-border">FAQ</h2>
-    <a href="{{ site.baseurl }}/documentation.html" class="mk-homepage__header__link">Documentation</a>
+    <a href="{{ site.baseurl }}/documentation.html" class="mk-main__header__link">Documentation</a>
 </header>
 
 <div data-aria-faq data-multi data-transition data-default="none" id="accGen">
@@ -50,10 +50,10 @@ layout: default
 
 
 </section>
-<aside class="mk-blog-highlights mk-homepage-main__section">
-<header class="mk-homepage__header">
+<aside class="mk-blog-highlights mk-main__section">
+<header class="mk-main__header">
     <h2 class="mk-heading mk-heading--xl mk-m-border">What's new?</h2>
-    <a href="{{ site.baseurl }}/blog/index.html" class="mk-homepage__header__link">Blog</a>
+    <a href="{{ site.baseurl }}/blog/index.html" class="mk-main__header__link">Blog</a>
 </header>
 <div class="mk-blog-highlights__wrapper">
 {% for post in site.categories.blog %}
