@@ -127,3 +127,4 @@
         outline: 1px dotted ButtonText;
       }
     }
+    :focus:not(:focus-visible) { outline: none }

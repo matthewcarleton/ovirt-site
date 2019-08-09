@@ -32,7 +32,6 @@
 
 
 .mk-why-metalkubed {
-    grid-area: why;
     margin-bottom: 0;
 
     p {
@@ -41,7 +40,6 @@
 }
 
 .mk-faqs {
-    grid-area: faq;
     &__list {
         background: var(--mk--BackgroundColor--200);
     }
@@ -109,9 +107,8 @@
     }
 }
 
-.mk-blog-highlights {
-        grid-area: blog;
-        margin: 0;
+.mk-blog-meta {
+    &__preview {
         border-left: none;
         border-right: none;
         @media (max-width: $mk--breakpoint--lg) {
@@ -122,21 +119,13 @@
             grid-gap: var(--mk--spacer--sm);
             display: grid;
         }
-    &__wrapper {
+    &__scroll-wrapper {
         display: flex;
         width: calc(100vw - var(--mk--spacer--sm));
         overflow: scroll;
         position: relative;
         -webkit-overflow-scrolling: touch;
-        // &::after {
-        //     content:'';
-        //     width: 30px;
-        //     height: 100%;
-        //     position: fixed;
-        //     z-index: 100;
-        //     right: 0;
-        //     background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.8));
-        // }
+        
         @media (min-width: $mk--breakpoint--md) {
             width: auto;
         }
@@ -144,7 +133,9 @@
             overflow: visible;
             flex-wrap: wrap;
         }
-    }
+        }
+    }/*preview*/
+        
     &__item {
         display: block;
         min-width: max-content;
@@ -155,31 +146,50 @@
         background: var(--mk--color-transparent-background--100);
         @media (min-width: $mk--breakpoint--lg){
             min-width:100%;
-        &:not(:last-of-type) {
-            margin-bottom: var(--mk--spacer--md);
-            margin-right: 0;
+            &:not(:last-of-type) {
+                margin-bottom: var(--mk--spacer--md);
+                margin-right: 0;
+            }
+            width: 100%;
         }
-        width: 100%;
-        }
+        // @media (min-width: $mk--breakpoint--md) {
+        //     padding: var(--mk--spacer--sm);
+        // }
         &:hover, &:active, &:focus {
             text-decoration: none;
             background: var(--mk--BackgroundColor--400);
         }
-    }
-    &__timestamp {
+    }/*item*/
+    &__timestamp, &__author {
         display: flex;
         align-items: center;
         margin-top: var(--mk--spacer--xs);
         &:before {
             content:'';
-            background: url("/assets/images/sprite.svg") no-repeat -20px 1px;
-            width: 18px;
+            background: url("/assets/images/sprite.svg") no-repeat ;
+            width: 23px;
             height: 18px;
             display: inline-block;
-            margin-right: var(--mk--spacer--sm);
+            margin-right: var(--mk--spacer--xs);
          }
     }
+    &__timestamp {
+        &--dark:before {
+            background-position:-20px 1px;
+        }
+        &--light:before {
+           background-position:-37px 0;
+       }
+    }
+    &__author {
+        margin-bottom: var(--mk--spacer--sm);
+        &:before {
+            background-position: -60px 0;
+        }
+    }
+    
 }
+
 
 // *,
 // *:before,

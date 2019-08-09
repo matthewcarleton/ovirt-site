@@ -1,5 +1,26 @@
 ---
 layout: default
 ---
+<div class="mk-masthead__content--sub">
+        <h1 class="mk-masthead__content--sub__title">Blog</h1>
+        <p class="mk-masthead__content--sub__text">Read about the newest updates in the community.</p>
+</div>
+</section>
+<main class="mk-main mk-blog">
 
-{{ content }}
+        <section class="mk-blog__posts mk-main__content">
+            {% for post in site.categories.blog %}
+            <article class="mk-blog-meta mk-main__section">
+                    <h3 class="mk-heading--lg mk-blog-meta__title">{{ post.title }}</h3>
+                    <time datetime="1999-12-23" class="mk-blog-meta__timestamp mk-blog-meta__timestamp--light">{{ post.date | date: "%A, %-d/%m/%Y" }}</time>
+                    <div class="mk-blog-meta__author">By {{ post.author }}</div>
+                    {{ content }}
+            </article>         
+            {% endfor %}
+        </section>
+        <aside class="mk-blog__categories mk-main__aside">
+            <header class="mk-main__header">
+                    <h2 class="mk-heading mk-heading--xl mk-m-border">Categories</h2>
+            </header> 
+        </aside>
+    </main>

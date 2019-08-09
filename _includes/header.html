@@ -33,3 +33,10 @@
         </ul>
       </nav>
   </header>
+  {% if page.url == "/blog" %}
+  <div class="mk-masthead__content--sub">
+      <h1 class="mk-masthead__content--sub__title">Blog</h1>
+      <p class="mk-masthead__content--sub__text">Read about the newest updates in the community.</p>
+    </div>
+  </section> 
+  {% endif %}

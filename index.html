@@ -18,7 +18,8 @@ layout: default
         </p>
         <a href="#" class="mk-button mk-button--secondary">Join the Conversation</a>
 </section>
-<main class="mk-main mk-main--homepage">
+<main class="mk-main mk-main__homepage">
+    <div class="mk-main__content">
 <section class="mk-why-metalkubed mk-main__section">
    <header class="mk-main__header">
    <h2 class="mk-heading mk-heading--xl mk-m-border">Why Metal3.io?</h2>
@@ -34,7 +35,7 @@ layout: default
 <section class="mk-faqs mk-main__section">
 <header class="mk-main__header">
     <h2 class="mk-heading mk-heading--xl mk-m-border">FAQ</h2>
-    <a href="{{ site.baseurl }}/documentation.html" class="mk-main__header__link">Documentation</a>
+    <a href="{{ site.baseurl }}/documentation.html" class="mk-button mk-button--link">Documentation</a>
 </header>
 
 <div data-aria-faq data-multi data-transition data-default="none" id="accGen">
@@ -47,19 +48,18 @@ layout: default
 	</div>
 	{% endfor %}
 </div>
-
-
 </section>
-<aside class="mk-blog-highlights mk-main__section">
+</div>
+<aside class="mk-blog-meta mk-blog-meta__preview mk-main__aside">
 <header class="mk-main__header">
     <h2 class="mk-heading mk-heading--xl mk-m-border">What's new?</h2>
-    <a href="{{ site.baseurl }}/blog/index.html" class="mk-main__header__link">Blog</a>
+    <a href="{{ site.baseurl }}/blog/index.html" class="mk-button mk-button--link">Blog</a>
 </header>
-<div class="mk-blog-highlights__wrapper">
+<div class="mk-blog-meta--preview__scroll-wrapper">
 {% for post in site.categories.blog %}
-<a href="{{ post.url }}" class="mk-blog-highlights__item">
-    <h3 class="mk-heading--lg mk-blog-highlights__title">{{ post.title }}</h3>
-    <time datetime="1999-12-23" class="mk-blog-highlights__timestamp">{{ post.date | date: "%A, %-d/%m/%Y" }}</time>
+<a href="{{ post.url }}" class="mk-blog-meta__item">
+    <h3 class="mk-heading--lg mk-blog-meta__title">{{ post.title }}</h3>
+    <time datetime="1999-12-23" class="mk-blog-meta__timestamp mk-blog-meta__timestamp--dark">{{ post.date | date: "%a, %-d/%m/%y" }}</time>
 </a>
 {% endfor %}
 </div>

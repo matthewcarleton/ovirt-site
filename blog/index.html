@@ -8,3 +8,34 @@ permalink: blog/index.html
         <p class="mk-masthead__content--sub__text">Read about the newest updates in the community.</p>
 </div>
 </section>
+<main class="mk-main mk-blog">   
+    <section class="mk-blog__posts mk-main__content">
+        {% for post in site.categories.blog %}
+        <article class="mk-blog-meta mk-main__section">
+                <h3 class="mk-heading--lg mk-blog-meta__title">{{ post.title }}</h3>
+                <time datetime="1999-12-23" class="mk-blog-meta__timestamp mk-blog-meta__timestamp--light">{{ post.date | date: "%A, %-d/%m/%Y" }}</time>
+                <div class="mk-blog-meta__author">By {{ post.author }}</div>
+                <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+                <a class="mk-button mk-button--link" href="{{ post.url }}">Read More</a>
+        </article>         
+        {% endfor %}
+    </section>
+    <aside class="mk-blog__categories mk-main__aside">
+        <header class="mk-main__header">
+                <h2 class="mk-heading mk-heading--xl mk-m-border">Categories</h2>
+<!-- <ul>
+{% assign categories_list = site.categories %}
+  {% if categories_list.first[0] == null %}
+    {% for category in categories_list %}
+      <li><a href="#{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a></li>
+    {% endfor %}
+  {% else %}
+    {% for category in categories_list %}
+      <li><a href="#{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a></li>
+    {% endfor %}
+  {% endif %}
+{% assign categories_list = nil %}
+</ul> -->
+        </header> 
+    </aside>
+</main>
