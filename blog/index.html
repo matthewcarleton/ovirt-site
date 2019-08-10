@@ -23,8 +23,8 @@ permalink: blog/index.html
     <aside class="mk-blog__categories mk-main__aside">
         <header class="mk-main__header">
                 <h2 class="mk-heading mk-heading--xl mk-m-border">Categories</h2>
-<!-- <ul>
-{% assign categories_list = site.categories %}
+<ul>
+{% assign categories_list = site.categories.blog %}
   {% if categories_list.first[0] == null %}
     {% for category in categories_list %}
       <li><a href="#{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a></li>
@@ -35,7 +35,7 @@ permalink: blog/index.html
     {% endfor %}
   {% endif %}
 {% assign categories_list = nil %}
-</ul> -->
+</ul>
         </header> 
     </aside>
 </main>
