@@ -9,14 +9,17 @@ layout: default
 <main class="mk-main mk-blog">
 
         <section class="mk-blog__posts mk-main__content">
-            {% for post in site.categories.blog %}
             <article class="mk-blog-meta mk-main__section">
-                    <h3 class="mk-heading--lg mk-blog-meta__title">{{ post.title }}</h3>
-                    <time datetime="1999-12-23" class="mk-blog-meta__timestamp mk-blog-meta__timestamp--light">{{ post.date | date: "%A, %-d/%m/%Y" }}</time>
-                    <div class="mk-blog-meta__author">By {{ post.author }}</div>
+                    <h3 class="mk-heading--lg mk-blog-meta__title">{{ page.title }}</h3>
+                    <time datetime="1999-12-23" class="mk-blog-meta__timestamp mk-blog-meta__timestamp--light">{{ page.date | date: "%A, %-d/%m/%Y" }}</time>
+                    <div class="mk-blog-meta__author">By {{ page.author }}</div>
+                    {% for category in page.categories %}
+  <a href="/blog/{{ category | slugize }}/">
+    {{ category | remove-first }}
+  </a>
+{% endfor %}
                     {{ content }}
             </article>         
-            {% endfor %}
         </section>
         <aside class="mk-blog__categories mk-main__aside">
             <header class="mk-main__header">

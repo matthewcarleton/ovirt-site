@@ -39,13 +39,13 @@ layout: default
 </header>
 
 <div data-aria-faq data-multi data-transition data-default="none" id="accGen">
-	{% for post in site.categories.faqs %}
+	{% for faq in site.data.faq %}
 	<h3 data-aria-faq-heading>
-		{{ post.title }}
+		{{faq.question}}
 	</h3>
 	<div data-aria-faq-panel>
-		{{ post.content | strip_html | xml_escape | }}
-	</div>
+      {{faq.answer}}
+  </div>
 	{% endfor %}
 </div>
 </section>
@@ -56,7 +56,7 @@ layout: default
     <a href="{{ site.baseurl }}/blog/index.html" class="mk-button mk-button--link">Blog</a>
 </header>
 <div class="mk-blog-meta--preview__scroll-wrapper">
-{% for post in site.categories.blog %}
+{% for post in site.posts %}
 <a href="{{ post.url }}" class="mk-blog-meta__item">
     <h3 class="mk-heading--lg mk-blog-meta__title">{{ post.title }}</h3>
     <time datetime="1999-12-23" class="mk-blog-meta__timestamp mk-blog-meta__timestamp--dark">{{ post.date | date: "%a, %-d/%m/%y" }}</time>

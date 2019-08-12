@@ -24,12 +24,16 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
+paginate: 2
+paginate_path: "/blog/page:num/"
 sass: 
   sass_dir: _sass
   style: compressed
