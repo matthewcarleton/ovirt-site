@@ -14,7 +14,7 @@ layout: default
                     <time datetime="1999-12-23" class="mk-blog-meta__timestamp mk-blog-meta__timestamp--light">{{ page.date | date: "%A, %-d/%m/%Y" }}</time>
                     <div class="mk-blog-meta__author">By {{ page.author }}</div>
                     {% for category in page.categories %}
-  <a href="/blog/{{ category | slugize }}/">
+  <a href="/blog/categories.html#{{ category | slugize }}/">
     {{ category | remove-first }}
   </a>
 {% endfor %}
