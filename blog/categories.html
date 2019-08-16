@@ -14,7 +14,7 @@ permalink: blog/categories.html
             <h2 class="mk-heading mk-heading--xl mk-m-border">Categories</h2>
         </header>
       {% for category in site.categories %}  
-<h3 class="mk-heading mk-heading--lg" id="{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase}}!</h3>
+<h3 class="mk-heading mk-heading--lg" id="{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase}}</h3>
   <ul>
     {% assign pages_list = category[1] %}
     {% for post in pages_list %}
