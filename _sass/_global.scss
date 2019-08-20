@@ -37,13 +37,14 @@
             width: 15px;
             height: 15px;
             display: inline-block;
-            margin-left: var(--mk--spacer--sm);
+            position:relative;
+            left: var(--mk--spacer--sm);
         }
         &:hover, &:active, &:focus {
             color: var(--mk--Color--400);
             text-decoration: none;
             &:after {
-                margin-left: calc(var(--mk--spacer--sm) * 1.25);
+                left: calc(var(--mk--spacer--sm) * 1.25);
             }
         }
     }
@@ -147,5 +148,19 @@
 code {
     background: var(--mk--BackgroundColor--350);
     padding:1px var(--mk--spacer--xs);
+}
+
+.mk-pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin: var(--mk--spacer--md);
+    &__link {
+        &--prev {
+            margin-right:var(--mk--spacer--sm);
+        }
+        &--next {
+            margin-left:var(--mk--spacer--sm);
+        }
+    }
 }
 

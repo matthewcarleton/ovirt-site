@@ -32,7 +32,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
-paginate: 2
+paginate: 1
 paginate_path: "/blog/page:num/"
 sass: 
   sass_dir: _sass

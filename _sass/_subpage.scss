@@ -97,7 +97,6 @@
         &:after {
             content:"";
             clip-path: polygon(0% 87%, 50% 0%, 50% 0%, 100% 87%);
-            background: inherit;
             position: absolute;
             bottom:-39px;
             width:45px;
@@ -118,9 +117,12 @@
                 border-color: var(--mk--BorderColor--250);
             }
         }
-        &:hover {
-            text-decoration: none;
+        &.mk--selected {
+            &:after {
+                background: inherit;
+            }
         }
+
         &__text-block {
             border: var(--mk--BorderWidth--sm) solid var(--mk--BorderColor--300);
             min-width: 100%;
