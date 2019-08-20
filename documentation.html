@@ -8,7 +8,34 @@ permalink: /documentation.html
         <p class="mk-masthead__content--sub__text">The Metal³ project (pronounced: Metal Kubed) exists to provide components that allow you to do bare metal host management for Kubernetes. Metal³ works as a Kubernetes application, meaning it runs on Kubernetes and is managed through Kubernetes interfaces.</p>
 </div>
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const parent = document.querySelector(".mk-infograph");
 
+  const childrens = document.querySelectorAll(".mk-infograph__item");
+  // childrens.style.backgroundColor = 'black';
+
+  const child = document.querySelector(".mk-infograph__item");
+  // child.style.color = 'white';
+
+  Array.prototype.forEach.call(document.querySelectorAll(".mk-infograph__item"), function(
+    element
+  ) {
+    element.onclick = addActive;
+  });
+  function addActive(element) {
+    childrens.forEach(function(elem) {
+      elem.classList.remove("mk--selected");
+    });
+    element = this;
+    if (element.classList.contains("mk--selected")) {
+      element.classList.remove("mk--selected");
+    } else {
+      element.classList.add("mk--selected");
+    }
+  }
+});
+</script>
 <main>
     <section class="mk-main__section mk-component-overview">
         <header class="mk-main__header">
@@ -16,25 +43,25 @@ permalink: /documentation.html
         </header>               
             <div class="mk-infograph">
                     <p class="mk-infograph__text"> It is helpful to understand the high level architecture of of the Machine API Integration. Click on each step to learn more about that particular component.</p>
-                <a href="#" class="mk-infograph__item mk--selected">
+                <button type="button" class="mk-infograph__item mk--selected">
                     <h4 class="mk-heading mk-heading--md">Machine controller</h4>
                     <span class="mk-infograph__item__text-block">Bare metal actuator</span>
-                </a>
-                <div class="mk-infograph__description">
-                    <p>The first component is the Bare Metal Actuator, which is an implementation of the Machine Actuator interface defined by the cluster-api project. This actuator reacts to changes to Machine objects and acts as a client of the BareMetalHost custom resources managed by the Bare Metal <Operator class=""></Operator></p>
+                </button>
+                <div id="step1" class="mk-infograph__description">
+                    <p>The first component is the Bare Metal Actuator, which is an implementation of the Machine Actuator interface defined by the cluster-api project. This actuator reacts to changes to Machine objects and acts as a client of the BareMetalHost custom resources managed by the Bare Metal</p>
                 </div>
-                <a href="#" class="mk-infograph__item">
+                <button type="button" class="mk-infograph__item">
                     <h4 class="mk-heading mk-heading--md">Bare metal operator</h4>
                     <p>With CRDs representing bare metal inventory with configuration needed by its bare metal management workers.</p>
-                </a>
-                <div class="mk-infograph__description">
-                    <p>The first component is the Bare Metal Actuator, which is an implementation of the Machine Actuator interface defined by the cluster-api project. This actuator reacts to changes to Machine objects and acts as a client of the BareMetalHost custom resources managed by the Bare Metal <Operator class=""></Operator></p>
+                </button>
+                <div id="step2" class="mk-infograph__description">
+                    <p>The first component is the Bare Metal Actuator, which is an implementation of the Machine Actuator interface defined by the cluster-api project. This actuator reacts to changes to Machine objects and acts as a client of the BareMetalHost custom resources managed by the Bare Metal </p>
                 </div>
-                <a href="#" class="mk-infograph__item">
+                <button type="button" class="mk-infograph__item">
                     <h4 class="mk-heading mk-heading--md">Bare metal management pods</h4>
-                </a>
-                <div class="mk-infograph__description">
-                    <p>The first component is the Bare Metal Actuator, which is an implementation of the Machine Actuator interface defined by the cluster-api project. This actuator reacts to changes to Machine objects and acts as a client of the BareMetalHost custom resources managed by the Bare Metal <Operator class=""></Operator></p>
+                </button>
+                <div id="step3" class="mk-infograph__description">
+                    <p>The first component is the Bare Metal Actuator, which is an implementation of the Machine Actuator interface defined by the cluster-api project. This actuator reacts to changes to Machine objects and acts as a client of the BareMetalHost custom resources managed by the Bare Metal </p>
                 </div>
                 <img class="mk-infograph__server" src="assets/images/infograph-stack.svg" alt="" />
             </div>
