@@ -13,10 +13,31 @@ permalink: /documentation.html
     <section class="mk-main__section mk-component-overview">
         <header class="mk-main__header">
         <h2 class="mk-heading mk-heading--xl mk-m-border">Metal<sup>3</sup> Component Overview</h2>
-        </header>   
-        <div class="mk-component-overview__content">
-            <p class="mk-component-overview__text"> It is helpful to understand the high level architecture of of the Machine API Integration. Click on each step to learn more about that particular component. View more detail in the documentation. </p>
-        </div> 
+        </header>               
+            <div class="mk-infograph">
+                    <p class="mk-infograph__text"> It is helpful to understand the high level architecture of of the Machine API Integration. Click on each step to learn more about that particular component.</p>
+                <a href="#" class="mk-infograph__item mk--selected">
+                    <h4 class="mk-heading mk-heading--md">Machine controller</h4>
+                    <span class="mk-infograph__item__text-block">Bare metal actuator</span>
+                </a>
+                <div class="mk-infograph__description">
+                    <p>The first component is the Bare Metal Actuator, which is an implementation of the Machine Actuator interface defined by the cluster-api project. This actuator reacts to changes to Machine objects and acts as a client of the BareMetalHost custom resources managed by the Bare Metal <Operator class=""></Operator></p>
+                </div>
+                <a href="#" class="mk-infograph__item">
+                    <h4 class="mk-heading mk-heading--md">Bare metal operator</h4>
+                    <p>With CRDs representing bare metal inventory with configuration needed by its bare metal management workers.</p>
+                </a>
+                <div class="mk-infograph__description">
+                    <p>The first component is the Bare Metal Actuator, which is an implementation of the Machine Actuator interface defined by the cluster-api project. This actuator reacts to changes to Machine objects and acts as a client of the BareMetalHost custom resources managed by the Bare Metal <Operator class=""></Operator></p>
+                </div>
+                <a href="#" class="mk-infograph__item">
+                    <h4 class="mk-heading mk-heading--md">Bare metal management pods</h4>
+                </a>
+                <div class="mk-infograph__description">
+                    <p>The first component is the Bare Metal Actuator, which is an implementation of the Machine Actuator interface defined by the cluster-api project. This actuator reacts to changes to Machine objects and acts as a client of the BareMetalHost custom resources managed by the Bare Metal <Operator class=""></Operator></p>
+                </div>
+                <img class="mk-infograph__server" src="assets/images/infograph-stack.svg" alt="" />
+            </div>
     </section>
     <section class="mk-main__section">
         <header class="mk-main__header">
@@ -76,8 +97,8 @@ permalink: /documentation.html
                 </ul>
                 <h3 class="mk-heading mk-heading--lg">In The News</h3>
                 <ul>
-                    <l><a href="https://thenewstack.io/metal3-uses-openstacks-ironic-for-declarative-bare-metal-kubernetes/">The New Stack: Metal3 Uses OpenStack’s Ironic for Declarative Bare Metal Kubernetes</a></l>
-                    <l><a href="https://www.theregister.co.uk/2019/04/05/red_hat_metalkubel/">The Register: Raise some horns: Red Hat's MetalKube aims to make Kubernetes on bare machines simple</a></l>
+                    <li><a href="https://thenewstack.io/metal3-uses-openstacks-ironic-for-declarative-bare-metal-kubernetes/">The New Stack: Metal3 Uses OpenStack’s Ironic for Declarative Bare Metal Kubernetes</a></li>
+                    <li><a href="https://www.theregister.co.uk/2019/04/05/red_hat_metalkubel/">The Register: Raise some horns: Red Hat's MetalKube aims to make Kubernetes on bare machines simple</a></li>
                 </ul>
                 <h3 class="mk-heading mk-heading--lg">Blog Posts</h3>
                 <ul>

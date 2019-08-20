@@ -51,7 +51,7 @@
         text-align: left; 
         display: flex;
         justify-content: space-between;
-        color: var(--mk--Color--300);
+        // color: var(--mk--Color--300);
         border: none;
         border-top: var(--mk--BorderWidth--sm) solid var(--mk--BorderColor--300);
         background: none;
@@ -65,19 +65,18 @@
             border-top: 8px solid transparent;
             border-left: 10px solid var(--mk--BackgroundColor--100);
             border-bottom: 8px solid transparent;
+            border-left-color: var(--mk--BackgroundColor--400); 
+
         }
         &[aria-expanded="true"]{
             color: var(--mk--Color--400);
             &:after {
                 transform: rotate(90deg);
-                border-left-color: var(--mk--BackgroundColor--400); 
+                border-left-color: var(--mk--BackgroundColor--100);
             }
-        &:hover, &:active, &:focus {
-                color: var(--mk--Color--300);
-                &:after {
-                    border-left-color: var(--mk--BackgroundColor--100);
-                }
-            }
+        }
+        &focus:not(:focus-visible) {
+            outline: none;
         }
         
     }
