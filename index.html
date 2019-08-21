@@ -1,7 +1,12 @@
 ---
 layout: default
 ---
-
+<div class="mk-masthead__content">
+    <h1 class="mk-masthead__content__title">Metal<sup>3</sup></h1>
+    <h3 class="mk-masthead__content__sub-title">Bare metal host provisioning for Kubernetes</h3>
+    <a href="{{ site.baseurl }}/try-it.html" class="mk-button mk-button--primary">Get Started with Metal Kubed</a>
+  </div>
+</section>
 <section class="mk-community-callout">
         <div class="mk-community-callout__images">
           <img src="/assets/images/home-left-image.svg" alt="">
@@ -11,11 +16,12 @@ layout: default
           Connect with the Metal3.io community to learn more, contribute ideas, and help build the future of Metal3.io. 
           Learn more about how to make the most of the Metal3io features in your work.
         </p>
-        <a href="#" class="mk-button mk-button--secondary">Join the Conversation</a>
+        <a href="{{ site.baseurl }}/community-resources.html" class="mk-button mk-button--secondary">Join the Conversation</a>
 </section>
-<main class="mk-homepage-main">
-<section class="mk-why-metalkubed mk-homepage-main__section">
-   <header class="mk-homepage__header">
+<main class="mk-main mk-main__homepage">
+    <div class="mk-main__content">
+<section class="mk-why-metalkubed mk-main__section">
+   <header class="mk-main__header">
    <h2 class="mk-heading mk-heading--xl mk-m-border">Why Metal3.io?</h2>
    </header>
           <p>There are a number of great open source tools for bare metal host provisioning, including Ironic.
@@ -26,35 +32,34 @@ layout: default
           <p>The Metal3.io project is also building integration with the Kubernetes cluster-api project, allowing
           Metal3.io to be used as an infrastructure backend for Machine objects from the Cluster API.</p>
 </section>
-<section class="mk-faqs mk-homepage-main__section">
-<header class="mk-homepage__header">
+<section class="mk-faqs mk-main__section">
+<header class="mk-main__header">
     <h2 class="mk-heading mk-heading--xl mk-m-border">FAQ</h2>
-    <a href="{{ site.baseurl }}/documentation.html" class="mk-homepage__header__link">Documentation</a>
+    <a href="{{ site.baseurl }}/documentation.html" class="mk-button mk-button--link">Documentation</a>
 </header>
 
 <div data-aria-faq data-multi data-transition data-default="none" id="accGen">
-	{% for post in site.categories.faqs %}
+	{% for faq in site.data.faq %}
 	<h3 data-aria-faq-heading>
-		{{ post.title }}
+		{{faq.question}}
 	</h3>
 	<div data-aria-faq-panel>
-		{{ post.content | strip_html | xml_escape | }}
-	</div>
+      {{faq.answer}}
+  </div>
 	{% endfor %}
 </div>
-
-
 </section>
-<aside class="mk-blog-highlights mk-homepage-main__section">
-<header class="mk-homepage__header">
+</div>
+<aside class="mk-blog-meta mk-blog-meta__preview mk-main__aside">
+<header class="mk-main__header">
     <h2 class="mk-heading mk-heading--xl mk-m-border">What's new?</h2>
-    <a href="{{ site.baseurl }}/blog/index.html" class="mk-homepage__header__link">Blog</a>
+    <a href="{{ site.baseurl }}/blog/index.html" class="mk-button mk-button--link">Blog</a>
 </header>
-<div class="mk-blog-highlights__wrapper">
-{% for post in site.categories.blog %}
-<a href="{{ post.url }}" class="mk-blog-highlights__item">
-    <h3 class="mk-heading--lg mk-blog-highlights__title">{{ post.title }}</h3>
-    <time datetime="1999-12-23" class="mk-blog-highlights__timestamp">{{ post.date | date: "%A, %-d/%m/%Y" }}</time>
+<div class="mk-blog-meta--preview__scroll-wrapper">
+{% for post in site.posts %}
+<a href="{{ post.url }}" class="mk-blog-meta__snippet">
+    <h3 class="mk-heading--lg mk-blog-meta__title">{{ post.title }}</h3>
+    <time datetime="1999-12-23" class="mk-blog-meta__timestamp mk-blog-meta__item mk-blog-meta__timestamp--dark">{{ post.date | date: "%a, %-d/%m/%y" }}</time>
 </a>
 {% endfor %}
 </div>

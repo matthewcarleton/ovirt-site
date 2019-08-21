@@ -1,5 +1,5 @@
 <div class="mk-wrapper">
-    <section class="mk-masthead">
+    <section class="mk-masthead{% if page.url == "/" %} mk-masthead--home{% else %} mk-masthead--sub{% endif %}">
 <header class="mk-main-header">
     <a href="/" class="mk-main-header__brand">
         <svg version="1.1" viewBox="0 0 557 540" xmlns="http://www.w3.org/2000/svg">
@@ -26,17 +26,17 @@
           <span class="mk-main-header__toggle-text">menu</span>
         </button>
         <ul id="main_nav" class="mk-main-nav">
+          <li {% if page.url == "/blog/index.html" %} class="active" {% endif %}><a class="mk-main-nav__item" href="{{ site.baseurl }}/blog/index.html">Blog</a></li>
           <li {% if page.url == "/community-resources.html" %} class="active" {% endif %}><a class="mk-main-nav__item" href="{{ site.baseurl }}/community-resources.html">Community Resources</a></li>
           <li {% if page.url == "/documentation.html" %} class="active" {% endif %}><a class="mk-main-nav__item" href="{{ site.baseurl }}/documentation.html">Documentation</a></li>
           <li {% if page.url == "/try-it.html" %} class="active" {% endif %}><a class="mk-main-nav__item" href="{{ site.baseurl }}/try-it.html">Try It!</a></li>
         </ul>
       </nav>
   </header>
-  {% if page.url == "/" %}
-  <div class="mk-masthead__content">
-    <h1 class="mk-masthead__content__title mk-heading--2xl">Metal<sup>3</sup></h1>
-    <h3 class="mk-masthead__content__sub-title mk-heading-lg">Bare metal host provisioning for Kubernetes</h3>
-    <a href="#" class="mk-button mk-button--primary">Get Started with Metal Kubed</a>
-  </div>
+  {% if page.url == "/blog" %}
+  <div class="mk-masthead__content--sub">
+      <h1 class="mk-masthead__content--sub__title">Blog</h1>
+      <p class="mk-masthead__content--sub__text">Read about the newest updates in the community.</p>
+    </div>
+  </section> 
   {% endif %}
-</section>

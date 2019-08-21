@@ -7,6 +7,7 @@
   --mk--FontSize--lg:  1.25rem; //20
   --mk--FontSize--xl:  1.75rem;//28
   --mk--FontSize--2xl: 2.625rem; //42
+  --mk--FontSize--3xl: 3.875rem; //62
 
   //spacers
   --mk--spacer--xs:  .5rem; //8  purple
@@ -24,6 +25,7 @@
   --mk--color-white--100: #FFF;
   --mk--color-white--150: #FAFAFA;
   --mk--color-white--200: #F6F6F6;
+  --mk--color-white--250: #EDEDED;
   --mk--color-black--100: #454545;
   --mk--color-black--200: #202020;
 
@@ -32,19 +34,25 @@
 
   //borders
   --mk--BorderWidth--sm: 2px;
+  --mk--BorderWidth--md: 3px;
   --mk--BorderWidth--lg: 4px;
-  --mk--BorderRadius: 30rem;
+  --mk--BorderRadius--sm: 3px;
+  --mk--BorderRadius--md: 10px;
+  --mk--BorderRadius--lg: 30rem;
   --mk--BorderColor--100: var(--mk--color-brand--100); //#01EEC4
   --mk--BorderColor--150: var(--mk--color-brand--300); //#00A9A9
   --mk--BorderColor--200: var( --mk--color-brand--400); //#008585
+  --mk--BorderColor--250: var( --mk--color-white--100); //#FFF
   --mk--BorderColor--300: var(--mk--color-white--200); //#f6f6f6
 
   //background colors
   --mk--BackgroundColor--100: var(--mk--color-brand--100); //#01EEC4
   --mk--BackgroundColor--150: var(--mk--color-brand--200); //#00A9A9
+  --mk--BackgroundColor--175: var(--mk--color-brand--400); //#008585
   --mk--BackgroundColor--200: var(--mk--color-white--100); //#FFF
   --mk--BackgroundColor--250: var(--mk--color-white--150); //#FAFAFA
   --mk--BackgroundColor--300: var(--mk--color-white--200); //#F6F6F6
+  --mk--BackgroundColor--350: var(--mk--color-white--250); //#EDEDED
   --mk--BackgroundColor--400: var(--mk--color-black--100); //#454545
   --mk--BackgroundColor--500: var(--mk--color-black--200); //#202020
 
@@ -68,6 +76,7 @@
 
   //shadows
   --mk--BoxShadow--sm: 1px 1px 6px rgba(0,0,0,0.1);
+  --mk--BoxShadow--top:0 -5px 5px -5px rgba(0,0,0,0.1);
 }
   //media queries (no custom properties as MQs :(
     $mk--breakpoint--xs: 0;

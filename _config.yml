@@ -22,15 +22,14 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: metal3_io
 github_username:  metal3-io
 
+
 # Build settings
 markdown: kramdown
 theme: minima
-
 plugins: [jekyll-paginate, jekyll-asciidoc, jekyll-redirect-from, jekyll-feed, jekyll-sitemap]
-paginate: 5
+paginate: 1
 paginate_path: "/blogs/page:num"
-
-sass:
+sass: 
   sass_dir: _sass
   style: compressed
 

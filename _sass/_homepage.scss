@@ -1,6 +1,4 @@
-.test {
-    color: pink;
-}
+
 .mk-community-callout {
     padding: var(--mk--spacer--md) var(--mk--spacer--sm);
     margin: 0 auto;
@@ -31,37 +29,9 @@
     }
 } //community callout
 
-.mk-homepage-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "blog"
-    "why"
-    "faq";
 
-    @media (min-width: $mk--breakpoint--lg){
-        grid-template-columns: 3fr minmax(350px, 1fr);
-        grid-template-areas: 
-        "why blog"
-        "faq blog"
-    }
-    &__section {
-        margin: var(--mk--spacer--sm);
-        background: var(--mk--BackgroundColor--250);
-        padding: var(--mk--spacer--sm);
-        border: var(--mk--BorderWidth--sm) solid var(--mk--BorderColor--300);
-        @media (min-width: $mk--breakpoint--lg){
-            margin: var(--mk--spacer--md);
-            padding: var(--mk--spacer--md);
-        }
-        @media (min-width: $mk--breakpoint--2xl){
-            margin: var(--mk--spacer--lg);
-        }
-    }
-}
 
 .mk-why-metalkubed {
-    grid-area: why;
     margin-bottom: 0;
 
     p {
@@ -70,7 +40,6 @@
 }
 
 .mk-faqs {
-    grid-area: faq;
     &__list {
         background: var(--mk--BackgroundColor--200);
     }
@@ -82,7 +51,7 @@
         text-align: left; 
         display: flex;
         justify-content: space-between;
-        color: var(--mk--Color--300);
+        // color: var(--mk--Color--300);
         border: none;
         border-top: var(--mk--BorderWidth--sm) solid var(--mk--BorderColor--300);
         background: none;
@@ -96,19 +65,18 @@
             border-top: 8px solid transparent;
             border-left: 10px solid var(--mk--BackgroundColor--100);
             border-bottom: 8px solid transparent;
+            border-left-color: var(--mk--BackgroundColor--400); 
+
         }
         &[aria-expanded="true"]{
             color: var(--mk--Color--400);
             &:after {
                 transform: rotate(90deg);
-                border-left-color: var(--mk--BackgroundColor--400); 
+                border-left-color: var(--mk--BackgroundColor--100);
             }
-        &:hover, &:active, &:focus {
-                color: var(--mk--Color--300);
-                &:after {
-                    border-left-color: var(--mk--BackgroundColor--100);
-                }
-            }
+        }
+        &focus:not(:focus-visible) {
+            outline: none;
         }
         
     }
@@ -138,9 +106,8 @@
     }
 }
 
-.mk-blog-highlights {
-        grid-area: blog;
-        margin: 0;
+.mk-blog-meta {
+    &__preview {
         border-left: none;
         border-right: none;
         @media (max-width: $mk--breakpoint--lg) {
@@ -151,21 +118,13 @@
             grid-gap: var(--mk--spacer--sm);
             display: grid;
         }
-    &__wrapper {
+    &__scroll-wrapper {
         display: flex;
         width: calc(100vw - var(--mk--spacer--sm));
         overflow: scroll;
         position: relative;
         -webkit-overflow-scrolling: touch;
-        // &::after {
-        //     content:'';
-        //     width: 30px;
-        //     height: 100%;
-        //     position: fixed;
-        //     z-index: 100;
-        //     right: 0;
-        //     background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.8));
-        // }
+        
         @media (min-width: $mk--breakpoint--md) {
             width: auto;
         }
@@ -173,8 +132,10 @@
             overflow: visible;
             flex-wrap: wrap;
         }
-    }
-    &__item {
+        }
+    }/*preview*/
+        
+    &__snippet {
         display: block;
         min-width: max-content;
         max-width: 450px;
@@ -184,196 +145,64 @@
         background: var(--mk--color-transparent-background--100);
         @media (min-width: $mk--breakpoint--lg){
             min-width:100%;
-        &:not(:last-of-type) {
-            margin-bottom: var(--mk--spacer--md);
-            margin-right: 0;
+            &:not(:last-of-type) {
+                margin-bottom: var(--mk--spacer--md);
+                margin-right: 0;
+            }
+            width: 100%;
         }
-        width: 100%;
-        }
+        // @media (min-width: $mk--breakpoint--md) {
+        //     padding: var(--mk--spacer--sm);
+        // }
         &:hover, &:active, &:focus {
             text-decoration: none;
             background: var(--mk--BackgroundColor--400);
         }
-    }
-    &__timestamp {
+    }/*item*/
+    &__item {
         display: flex;
         align-items: center;
-        margin-top: var(--mk--spacer--xs);
+        margin: var(--mk--spacer--xs) 0;
+
         &:before {
             content:'';
-            background: url("/assets/images/sprite.svg") no-repeat -20px 1px;
-            width: 18px;
+            background: url("/assets/images/sprite.svg") no-repeat ;
+            width: 23px;
             height: 18px;
             display: inline-block;
-            margin-right: var(--mk--spacer--sm);
-         }
-    }
-}
-
-.mk-homepage__header {
-    margin-bottom: var(--mk--spacer--md);
-    &__link {
-        display:inline-block;
-        color: var(--mk--Color--500);
-        font-size: var(--mk--FontSize--md);
-        margin-top: var(--mk--spacer--sm);
-        &:after{
-            content:'';
-            background: url("/assets/images/sprite.svg") no-repeat;
-            width: 15px;
-            height: 15px;
-            display: inline-block;
-            margin-left: var(--mk--spacer--sm);
+            margin-right: var(--mk--spacer--xs);
         }
+    }
+    &__timestamp {
+        &--dark:before {
+            background-position:-20px 1px;
+        }
+        &--light:before {
+           background-position:-37px 0;
+       }
+    }
+    &__author {
+        &:before {
+            background-position: -60px 0;
+        }
+    }
+    &__category {
+        background: var(--mk--BackgroundColor--200);
+        box-shadow: var(--mk--BoxShadow--sm);
+        padding: 0 var(--mk--spacer--xs);
+        position: relative;
+        max-width: max-content;
+        border-radius: var(--mk-borderRadius--dm);
+        margin-bottom: var(--mk--spacer--sm);
         &:hover, &:active, &:focus {
-            color: var(--mk--Color--400);
             text-decoration: none;
-            &:after {
-                margin-left: calc(var(--mk--spacer--sm) * 1.25);
-            }
+            opacity:.75;
         }
+        &:before {
+            background-position:-85px 0;
+            width: 15px;
+        }
+
     }
+    
 }
-
-
-// *,
-// *:before,
-// *:after {
-// 	box-sizing: border-box;
-// }
-
-// /**
-//  * Accordion container element
-//  */
-
-// /**
-//  * Add zero-width space. needed to ensure Safari + VO respect list semantics.
-//  * Set the before content to position absolute to negate any visible space
-//  * the before content could add to the document.
-//  */
-// .mk-faqs > li:before {
-// 	content: "\200B";
-// 	position: absolute;
-// }
-
-// /**
-//  * Accordion Heading
-//  */
-// .mk-faq__heading {
-// 	border: 1px solid #4464c2;
-// 	font-size: inherit;
-// 	margin: -1px 0 0;
-// }
-
-// .mk-faq__trigger {
-// 	-webkit-appearance: none;
-// 	background-color: #fafafa;
-// 	border: none;
-// 	border-radius: 0;
-// 	box-shadow: none;
-// 	color: #4464c2;
-// 	cursor: pointer;
-// 	display: block;
-// 	font-size: inherit;
-// 	margin: 0;
-// 	padding: .5em 2em .5em 1em;
-// 	position: relative;
-// 	text-align: left;
-// 	width: 100%;
-// 	z-index: 2;
-// }
-
-// .mk-faq__trigger:after {
-//   border-left: .4em solid transparent;
-//   border-right: .4em solid transparent;
-//   border-top: .5em solid #222;
-//   bottom: 0;
-//   content: '';
-//   height: 0;
-//   margin: auto;
-//   position: absolute;
-//   right: 1em;
-//   top: 0;
-//   transition: transform .2s ease-in-out;
-//   transform-origin: center center;
-//   transform: rotate(0deg);
-//   width: 0;
-// }
-
-// .mk-faq__trigger:hover:after,
-// .mk-faq__trigger:focus:after,
-// .mk-faq__trigger[aria-expanded="true"]:after {
-// 	border-top-color: #fff;
-// }
-
-// .mk-faq__trigger[aria-expanded="true"]:after {
-// 	transform: rotate(180deg);
-// }
-
-/**
- * This is needed to allow a double tap iOS 11
- * Safari + VO to function correctly, if there
- * are multiple elements (wrapper spans) to layout
- * text nodes within the accordion button.
-
-	-- This is not needed if a button only contains text
-	   and no other child nodes wrapping the text --
-
-.accordion__trigger > * {
-	pointer-events: none;
-}
- */
-
-// .mk-faq__trigger:hover,
-// .mk-faq__trigger:focus {
-// 	background-color: #0e3b5e;
-// 	color: #fff;
-// 	outline: none;
-// }
-
-// .mk-faq__trigger:focus {
-// 	box-shadow: inset 0 0 0 2px #1e82d1;
-// }
-
-// .mk-faq__trigger[aria-disabled="true"]:hover {
-// 	background-color: #1b75bc;
-// 	color: #fff;
-// 	cursor: not-allowed;
-// }
-
-// .mk-faqs__trigger[aria-disabled="true"]:focus {
-// 	background-color: #0a2a42;
-// }
-
-// .mk-faqs__answer {
-// 	background-color: inherit;
-// 	max-height: 0vh;
-// 	overflow: hidden;
-// 	padding: 0.001em 1.25em;
-// 	position: relative;
-// 	visibility: hidden;
-// 	z-index: 1;
-// }
-
-// .mk-faqs__answer--transition {
-// 	transition:
-// 		max-height .2s ease-in-out,
-// 		padding-top .2s ease-in-out,
-// 		padding-bottom .2s ease-in-out;
-// }
-
-// .mk-faqs__answer > :last-child {
-// 	margin-bottom: 0;
-// }
-
-// .mk-faqs__answer[aria-hidden="false"] {
-// 	max-height: 100vh;
-// 	overflow: auto;
-// 	padding: 1.25em;
-// 	visibility: visible;
-// }
-
-// .mk-faq__trigger[aria-expanded="true"] {
-// 	background: #1b75bc;
-// 	color: #fff;
-// }
