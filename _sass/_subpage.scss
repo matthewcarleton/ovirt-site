@@ -161,3 +161,45 @@
         }
     }
 }
+
+.mk-share-buttons{
+    display: inline-flex;
+    align-items: center;
+    margin: var(--mk--spacer--sm) 0 var(--mk--spacer--md);
+    &__item {
+        border: var(--mk--BorderWidth--sm) solid var(--mk--BorderColor--200);
+        padding: var(--mk--spacer--xs) var(--mk--spacer--sm);
+        display: flex;
+        color: var(--mk--Color--500);
+        &:first-of-type {
+            border-right: none;
+            border-radius: var(--mk--BorderRadius--lg) 0 0 var(--mk--BorderRadius--lg);
+        }
+        &:last-of-type {
+            border-radius: 0 var(--mk--BorderRadius--lg)  var(--mk--BorderRadius--lg) 0;
+        }
+        svg {
+            width:20px;
+            margin-right: var(--mk--spacer--xs);
+            path {
+                fill: var(--mk--Color--500);
+            }
+            .st0 {
+                fill: var(--mk--Color--100);
+            }
+        }
+        &:hover {
+            background: var(--mk--BorderColor--200);
+            color: #fff;
+            text-decoration: none;
+            svg {
+                path {
+                    fill: var(--mk--Color--100);
+                }
+                .st0 {
+                    fill:var(--mk--Color--500);
+                }
+            }
+        }
+    }
+}
