@@ -37,6 +37,7 @@
   --mk--BorderWidth--md: 3px;
   --mk--BorderWidth--lg: 4px;
   --mk--BorderRadius--sm: 3px;
+  --mk--BorderRadius--md: 10px;
   --mk--BorderRadius--lg: 30rem;
   --mk--BorderColor--100: var(--mk--color-brand--100); //#01EEC4
   --mk--BorderColor--150: var(--mk--color-brand--300); //#00A9A9
@@ -47,6 +48,7 @@
   //background colors
   --mk--BackgroundColor--100: var(--mk--color-brand--100); //#01EEC4
   --mk--BackgroundColor--150: var(--mk--color-brand--200); //#00A9A9
+  --mk--BackgroundColor--175: var(--mk--color-brand--400); //#008585
   --mk--BackgroundColor--200: var(--mk--color-white--100); //#FFF
   --mk--BackgroundColor--250: var(--mk--color-white--150); //#FAFAFA
   --mk--BackgroundColor--300: var(--mk--color-white--200); //#F6F6F6
@@ -74,6 +76,7 @@
 
   //shadows
   --mk--BoxShadow--sm: 1px 1px 6px rgba(0,0,0,0.1);
+  --mk--BoxShadow--top:0 -5px 5px -5px rgba(0,0,0,0.1);
 }
   //media queries (no custom properties as MQs :(
     $mk--breakpoint--xs: 0;

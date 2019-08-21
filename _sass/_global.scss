@@ -153,14 +153,43 @@ code {
 .mk-pagination {
     display: flex;
     justify-content: flex-end;
-    margin: var(--mk--spacer--md);
-    &__link {
-        &--prev {
-            margin-right:var(--mk--spacer--sm);
-        }
-        &--next {
-            margin-left:var(--mk--spacer--sm);
+    align-items: center;
+    padding: var(--mk--spacer--md);
+    
+    box-shadow: var(--mk--BoxShadow--top);
+    &__page, &__num {
+        padding: var(--mk--spacer--xs) var(--mk--spacer--sm);
+        &:not(:first-child){
+            margin-left: var(--mk--spacer--sm);
         }
     }
+    &__page {
+        border:var(--mk--BorderWidth--sm) solid transparent;
+        border-radius: var(--mk--BorderRadius--md);
+        width: 45px;
+        height: 44px;
+        display: inline-flex;
+       svg {
+        width: 14px;
+        path {
+           fill :var(--mk--color-brand--400);
+        }
+       }
+        &:hover {
+        border: var(--mk--BorderWidth--sm) solid var(--mk--BorderColor--200);
+       }
+
+    }
+    &__num {
+        border: var(--mk--BorderWidth--sm) solid var(--mk--BorderColor--200);
+        border-radius: var(--mk--BorderRadius--md);
+        &--current, &:hover {
+            background: var(--mk--BackgroundColor--175);
+            color: var(--mk--color-white--100);
+            text-decoration: none;
+        }
+
+    }
+    
 }
 
