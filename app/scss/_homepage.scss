@@ -1,0 +1,86 @@
+.ov-masthead--home {
+    .ov-heading--lg {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.ov-community-power {
+    text-align: center;
+    & > *:not(:last-child) {
+        margin-bottom: var(--ov--spacer--md);
+    }
+    .ov-community-power__content {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        > * {
+            margin-bottom: var(--ov--spacer--xs);
+            @media (min-width: $ov--breakpoint--md) {
+                transform: scale(.9);
+                transition: all .25s linear;
+                padding: 0 var(--ov--spacer--xs);
+                margin: 0;
+                &:hover {
+                    transform: scale(1);
+                }
+        }
+        }
+        @media (min-width: $ov--breakpoint--md) {
+            flex-direction: row;
+        }
+    }
+}//community power
+
+.ov-whats-included {
+    display:flex;
+    flex-direction: column;
+    > *:not(:last-child) {
+    margin-bottom: var(--ov--spacer--md);
+    }
+    &__items {
+        display: grid;
+        grid-gap: 3vw;
+        @media (min-width: $ov--breakpoint--md) {
+            grid-template-columns: 1fr 1fr ;
+        }
+        @media (min-width: $ov--breakpoint--lg) {
+            grid-template-columns: 1fr 1fr 1fr 1fr ;
+        }
+        .ov-heading {
+            font-weight: var(--ov--FontWeight--200);
+            margin-bottom: var(--ov--spacer--sm);
+        }
+    }
+    img {
+        align-self: center;
+    }
+}
+
+.ov-posts--home {
+    background: var(--ov--color-white--200);
+    @media (min-width: $ov--breakpoint--lg) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(6, min-content);
+    }
+    display: grid;
+    grid-gap: 2vw;
+    .ov-heading {
+        @media (min-width: $ov--breakpoint--lg) {
+            grid-column: 1/4;
+        }
+    }
+    .ov-button--secondary {
+        @media (min-width: $ov--breakpoint--lg) {
+            grid-column-end: 4;
+            justify-self: end;
+        }
+    }
+}

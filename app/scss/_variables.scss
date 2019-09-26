@@ -1,0 +1,70 @@
+:root {
+  //type
+  --ov--font-family: 'arial', sans-serif;
+  --ov--FontSize--xs:  .875rem; //14
+  --ov--FontSize--sm:  1rem; //16
+  --ov--FontSize--md:  1.125rem; //18
+  --ov--FontSize--lg:  1.375rem; //22
+  --ov--FontSize--xl:  1.5rem;//24
+  --ov--FontSize--2xl: 2.625rem; //42
+
+  //spacers
+  --ov--spacer--xs:  .5rem; //8  purple
+  --ov--spacer--sm:  1rem; //16  light blue
+  --ov--spacer--md:  2rem; //32  green
+  --ov--spacer--lg:  4rem; //64  yellow
+  --ov--spacer--xl:  5rem; //80  pink
+  --ov--spacer--2xl: 7rem; //112 blue
+
+  //color
+  --ov--color-brand--100: #0088CE;
+  --ov--color-brand--200: #025081;
+  --ov--color-white--100: #FFF;
+  --ov--color-white--150: #FAFAFA;
+  --ov--color-white--200: #F6F6F6;
+  --ov--color-grey--100:  #979797;
+  --ov--color-grey--200:  #666;
+  --ov--color-black--100: #454545;
+  --ov--color-black--200: #202020;
+
+  //transparencies
+  --ov--color-transparent-background--100: rgba(32,32,32,.90);
+
+  //borders
+  --ov--BorderWidth--sm: 2px;
+  --ov--BorderWidth--lg: 4px;
+  --ov--BorderRadius--sm: .625rem;
+  --ov--BorderRadius--lg: 30rem;
+ 
+  //text
+  --ov--Color--100: var(--ov--color-white--100);
+  --ov--Color--200: var(--ov--color-white--200);
+  --ov--Color--300: var(--ov--color-brand--100);
+  --ov--Color--400: var(--ov--color-black--200);
+  --ov--Color--500: var(--ov--color-brand--400);
+  --ov--Color--600: var(--ov--color-brand--300);
+
+
+  --ov--LineHeight--sm: 1.3;
+  --ov--LineHeight--lg: 1.5;
+
+  --ov--FontWeight--100: 400;
+  --ov--FontWeight--200: 700;
+
+  //animation
+  --ov--animation: all .15s linear;
+
+  //shadows
+  --ov--BoxShadow--sm: 0px 1px 4px rgba(0,0,0,0.5);
+
+      //misc
+      --ov--menu-offset: 56px;
+}
+  //media queries (no custom properties as MQs :(
+    $ov--breakpoint--xs: 0;
+    $ov--breakpoint--sm: 576px;
+    $ov--breakpoint--md: 768px;
+    $ov--breakpoint--lg: 992px;
+    $ov--breakpoint--xl: 1200px;
+    $ov--breakpoint--2xl: 1450px; 
+

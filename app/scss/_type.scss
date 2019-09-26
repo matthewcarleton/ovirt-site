@@ -1,0 +1,42 @@
+//type
+.ov-heading{
+    color: var(--ov--Color--400);
+    font-weight: var(--ov--FontWeight--100);
+}
+
+.ov-heading--xs, .ov-heading--sm {
+    font-size: var(--ov--FontSize--xs);
+}
+.ov-heading--md {
+    font-size: var(--ov--FontSize--sm);
+}
+.ov-heading--lg {
+    font-size: var(--ov--FontSize--md);
+}
+.ov-heading--xl {
+    font-size: var(--ov--FontSize--lg);
+}
+.ov-heading--2xl {
+    font-size: var(--ov--FontSize--lg);
+}
+
+@media (min-width: $ov--breakpoint--lg) {
+    .ov-heading--xs {
+        font-size: var(--ov--FontSize--xs);
+    }
+    .ov-heading--sm {
+        font-size: var(--ov--FontSize--sm);
+    }
+    .ov-heading--md {
+        font-size: var(--ov--FontSize--md);
+    }
+    .ov-heading--lg {
+        font-size: var(--ov--FontSize--lg);
+    }
+    .ov-heading--xl {
+        font-size: var(--ov--FontSize--xl);
+    }
+    .ov-heading--2xl {
+        font-size: var(--ov--FontSize--2xl);
+    }
+}

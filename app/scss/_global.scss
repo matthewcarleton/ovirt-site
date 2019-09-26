@@ -1,0 +1,95 @@
+.ov-main {
+    margin-top: var(--ov--menu-offset);
+}
+
+.ov-masthead {
+    background: url('/images/oVirt_About_BG_Overlay.png') left top no-repeat var(--ov--color-brand--100);
+    background-size: cover;
+    padding: var(--ov--spacer--sm);
+    text-align: center;
+
+    @media (min-width: $ov--breakpoint--lg) {
+        padding: var(--ov--spacer--lg);
+    }
+    
+    .ov-heading {
+        color: var(--ov--color-white--100);
+        &--lg, &--xl {
+            margin-bottom: var(--ov--spacer--xs);
+            @media (min-width: $ov--breakpoint--lg) {
+                margin-bottom: var(--ov--spacer--md);
+            }
+        }
+    }
+    .ov-button {
+        margin:0 var(--ov--spacer--xs) var(--ov--spacer--xs);
+    }
+
+}//masthead
+
+.ov-site-section {
+    padding: var(--ov--spacer--sm);
+    @media (min-width: $ov--breakpoint--lg){
+     padding: var(--ov--spacer--md);
+    }
+}
+
+.ov-post{
+    background: var(--ov--color-white--100);
+    box-shadow: var(--ov--BoxShadow--sm);
+    padding: var(--ov--spacer--sm); 
+    > *:not(:last-child) {
+        margin-bottom: var(--ov--spacer--sm);
+    }
+    .ov-heading {
+        padding-bottom: var(--ov--spacer--xs);
+        border-bottom: 1px solid var(--ov--color-grey--100);
+    }
+    .ov-post-data {
+        font-size: var(--ov--FontSize--xs);
+    }
+}
+
+.ov-button {
+    font-size: var(--ov--fontSize--md);
+    display: inline-flex;
+    padding: var(--ov--spacer--xs) var(--ov--spacer--sm);
+    align-items: center;
+    &:after {
+        margin-left: var(--ov--spacer--xs);
+        content:'';
+        background: url('/images/sprite.svg') no-repeat;
+        
+        display: block;
+        width: 9px;
+        height: 14px;
+    }
+    &--primary {
+        border-radius: var(--ov--BorderRadius--sm);
+        color: var(--ov--color-black--100);
+        background: var(--ov--color-white--100);
+        &:after {
+            background-position:  0 -76px;
+        }
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+            background: var(--ov--color-brand--200);
+            color: var(--ov--color-white--200);
+            &:after {
+                filter: invert(1);
+            }
+        }
+    }//primary
+    &--secondary {
+        color: var(--ov--color-brand--100);
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+            &:after {
+                background-position: -13px -76px;
+            }
+        }
+        &:after {
+            background-position: -16px -76px;
+        }
+    }
+}
