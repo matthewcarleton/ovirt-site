@@ -185,6 +185,9 @@ button:-moz-focusring,
   .ov-heading--2xl {
     font-size: var(--ov--FontSize--2xl); } }
 
+.ov-masthead--blog {
+  background-image: url("/images/oVirt_Blog_BG_Overlay.png"); }
+
 .ov-header-main {
   background: var(--ov--color-brand--200);
   display: grid;
