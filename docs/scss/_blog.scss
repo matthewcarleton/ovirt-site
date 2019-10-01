@@ -1,0 +1,33 @@
+.ov-masthead--home {
+    .ov-heading--lg {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+.ov-masthead ov-masthead--blog {
+    background-image: url("/images/oVirt_Blog_BG_Overlay.png");
+}
+
+.ov-posts--home {
+    background: var(--ov--color-white--200);
+    @media (min-width: $ov--breakpoint--lg) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(6, min-content);
+    }
+    display: grid;
+    grid-gap: 2vw;
+    .ov-heading {
+        @media (min-width: $ov--breakpoint--lg) {
+            grid-column: 1/4;
+        }
+    }
+    .ov-button--secondary {
+        @media (min-width: $ov--breakpoint--lg) {
+            grid-column-end: 4;
+            justify-self: end;
+        }
+    }
+}
