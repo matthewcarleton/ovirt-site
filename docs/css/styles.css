@@ -185,6 +185,13 @@ button:-moz-focusring,
   .ov-heading--2xl {
     font-size: var(--ov--FontSize--2xl); } }
 
+.ov-masthead--blog {
+  background-image: url("/images/oVirt_Blog_BG_Overlay.png") left top no-repeat var(--ov--color-brand--100); }
+  .ov-masthead--blog .ov-heading--lg {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto; }
+
 .ov-header-main {
   background: var(--ov--color-brand--200);
   display: grid;
@@ -427,7 +434,7 @@ button:-moz-focusring,
     left: 0; } }
 
 .ov-footer-main {
-  background: var(--ov--color-brand--100);
+  background: var(--ov--color-brand--200);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -453,10 +460,12 @@ button:-moz-focusring,
       height: 20px;
       margin-right: var(--ov--spacer--xs); }
 
-.ov-masthead--home .ov-heading--lg {
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto; }
+.ov-masthead--home {
+  background: url("/images/oVirt_About_BG_Overlay.png") left top no-repeat var(--ov--color-brand--100); }
+  .ov-masthead--home .ov-heading--lg {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto; }
 
 .ov-community-power {
   text-align: center; }

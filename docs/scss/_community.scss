@@ -1,0 +1,6 @@
+.ov-community {
+    display:flex;
+    flex-direction: column;
+    > *:not(:last-child) {
+    margin-bottom: var(--ov--spacer--md);
+    }
