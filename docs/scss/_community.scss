@@ -4,3 +4,16 @@
     > *:not(:last-child) {
     margin-bottom: var(--ov--spacer--md);
     }
+    }
+
+.ov-masthead--community {
+	background-image: url(oVirt_Community_Header.png);
+    }    
+
+.ov-community-paragraph {
+	max-width: 1080px; 
+    }    
+.ov-community-list {
+	max-width: 1080px; 
+	margin-left: 30px;
+    }    

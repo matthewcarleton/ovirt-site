@@ -23,7 +23,7 @@
 <div class="ov-wrapper">
   <header class="ov-header-main">
         <button id="nav-toggle" class="nav-toggle"></button>
-    <a href=""  aria-label="home-link" class="ov-brand-main"><img src="images/logo.svg" alt="" /></a>
+    <a href="index.html"  aria-label="home-link" class="ov-brand-main"><img src="images/logo.svg" alt="" /></a>
 <nav class="ov-nav-main nav-collapse">
   <ul class="ov-nav-main__items menu-items">
     <li class="ov-nav-main__item"><a class="ov-nav-main__link" href="download.html">Download</a></li>
@@ -73,35 +73,45 @@
     </section>
 
    <section class="ov-site-section ov-masthead--community">
-      <h2 class="ov-heading ov-heading--lg">Getting Involved</h2>
+      <h2 class="ov-heading ov-heading--lg">Community</h2>
       <br>
       <div>
-        <p>The oVirt community is a group of multidisciplinary individuals who are contributing code, writing documentation, reporting bugs, contributing UX and design expertise, and engaging with the community.
+        <p class="ov-community-paragraph">oVirt is a community project, and we welcome contributions from everyone! If you’d like to write code, report bugs, contribute designs, or enhance the documentation, we would love your help!
         </p>  
         <br>   
-        <p>
-        Before getting started, we recommend that you: 
+        <p class="ov-community-paragraph">
+        There are a few ways to engage with the oVirt Community: 
         </p>
-        <ul style="list-style-type:disc;">
+        <ul style="list-style-type:disc;" class="ov-community-list">
           <li>
-            Sign up for the users@ovirt.org mailing list and send us an email saying how you would like to contribute. Visit our mailing lists page for other oVirt mailing lists to sign up for.
+            <a href="https://ovirt.org/events/">Events</a>
           </li>
           <li>
-            For fluent, real-time communication, join us on IRC.
+            <a href="#">Forums/ Mailing lists</a>
           </li>
           <li>
-            Please read our community etiquette guidelines. (Quick summary: Be nice!)
+            <a href="https://www.facebook.com/groups/ovirt.openvirtualization/">oVirt Facebook Group</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/ovirt">Twitter</a>
+          </li>
+          <li>
+            IRC – #ovirt on irc.oftc.net
           </li>
         </ul>
+        <br>
+        <p>
+          Before getting started, please read our <a href="https://ovirt.org/community/about/community-guidelines.html">community etiquette guidelines</a>.
+        </p>
       </div>
     </section>
 
     <section class="ov-site-section ov-masthead--community">
-      <h2 class="ov-heading ov-heading--lg">Develop Code</h2>
+      <h2 class="ov-heading ov-heading--lg">Developers</h2>
       <br>
       <div>
-        <p>
-          Are you a wiz with Java, Python, or Bash? We’d love to have you join us! For in-depth information on the projects and procedures, visit the Documentation pages.
+        <p class="ov-community-paragraph">
+          If you’d like to contribute code to oVirt, visit the <a href="https://ovirt.org/develop/">Developer section</a> of the site for guidelines. All of our projects use git. Most are hosted at <a href="https://gerrit.ovirt.org/#/dashboard/self">gerrit.ovirt.org</a> , and the rest are hosted at <a href="https://github.com/oVirt/"> github.com/oVirt</a>. 
         </p>  
       </div>  
     </section>
@@ -110,38 +120,8 @@
       <h2 class="ov-heading ov-heading--lg">Translate</h2>
       <br>
       <div>
-        <p>
-          Want to help make oVirt's user interface and documentation available in multiple languages for users around the globe? Examples include Italian, Portuguese, Chinese, Japanese, Korean, and more. To help out, sign up for the devel@ovirt.org mailing list.  
-        </p>    
-      </div>  
-    </section>
-
-    <section class="ov-site-section ov-masthead--community">
-      <h2 class="ov-heading ov-heading--lg">Case Studies</h2>
-      <br>
-      <div>
-        <p>
-         Read our featured case studies and find out how a wide variety of organizations around the world are successfully deploying and benefiting from oVirt.
-        </p>    
-      </div>  
-    </section>
-
-    <section class="ov-site-section ov-masthead--community">
-      <h2 class="ov-heading ov-heading--lg">Design</h2>
-      <br>
-      <div>
-        <p>
-         Love design or UX? From concept through to implementation, help us to deliver a seamless user experience for oVirt users. To join us, sign up for the devel@ovirt.org mailing list.
-        </p>    
-      </div>  
-    </section>
-
-    <section class="ov-site-section ov-masthead--community">
-      <h2 class="ov-heading ov-heading--lg">Meet Our Infrstructure Team</h2>
-      <br>
-      <div>
-        <p>
-         The infrastructure team are a group of volunteers and professionals who manage the servers, build tools, and create new applications to help make oVIrt development a smoother process. We are located all over the globe and communicate primarily by the #ovirt channel on irc.OFTC.net and on the infra@ovirt.org mailing list.
+        <p class="ov-community-paragraph">
+          oVirt’s user interface and documentation are available in multiple languages for users around the globe. Examples include Italian, Portuguese, Chinese, Japanese, Korean, and more. To contribute translations, sign up for <a href="https://translate.zanata.org/?dswid=8280">Zanata</a> and access our <a href="https://translate.zanata.org/project/view/ovirt?dswid=1139">project</a>. 
         </p>    
       </div>  
     </section>
@@ -150,67 +130,98 @@
       <h2 class="ov-heading ov-heading--lg">Documentation</h2>
       <br>
       <div>
-        <p>
-         Good at technical communication? oVirt needs concise, reader-friendly, up-to-date installation and usage documentation. To help out, log in to our source repository.
+        <p class="ov-community-paragraph">
+         oVirt needs concise, user-friendly, up-to-date installation and usage documentation. To contribute, visit the <a href="https://github.com/oVirt/ovirt-site/tree/master/source/documentation">documentation repository</a> and the <a href="https://github.com/oVirt/ovirt-site/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation">documentation issues tracker</a>. You can also report any documentation issues you find by clicking “Report an issue with this page” at the bottom of the documentation.
         </p>    
       </div>  
     </section>
 
     <section class="ov-site-section ov-masthead--community">
-      <h2 class="ov-heading ov-heading--lg">Find and File Bugs</h2>
+      <h2 class="ov-heading ov-heading--lg">Reporting Bugs and New Feature Requests (RFEs)</h2>
       <br>
       <div>
-        <p>
-         Help us to shake bugs out of oVirt and create a better user experience for all. You can report oVirt bugs on Red Hat bugzilla. If you do not have a Bugzilla account yet, you can create one here. Need to report a security issue? Please follow the security reporting procedure.
+        <p class="ov-community-paragraph">
+         Reporting bugs is one of the most valuable ways you can contribute! Ideas for new features are also very welcome. Report bugs and RFEs using the following issue trackers:
+        </p>    
+        <ul style="list-style-type:disc;" class="ov-community-list">
+          <li>
+            <a href="https://bugzilla.redhat.com/enter_bug.cgi?classification=oVirt">Bugzilla - bugs and RFEs in oVirt Engine and oVirt Node</a>
+          </li>
+          <li>
+            <a href="https://github.com/oVirt/ovirt-web-ui/issues">VM Portal GitHub - bugs and RFEs in VM Portal</a>
+          </li>
+          <li>
+            <a href="https://github.com/oVirt/ovirt-site/issues?q=is%3Aissue+is%3Aopen+label%3Adocumentation">oVirt Documentation GitHub - Documentation issues</a>
+          </li>
+          <li>
+            Filing a security issue following <a href="https://ovirt.org/develop/security/security.html">this reporting procedure</a>
+          </li>
+        </ul>
+      </div>  
+    </section>
+
+    <section class="ov-site-section ov-masthead--community">
+      <h2 class="ov-heading ov-heading--lg">Participate in the oVirt Infrastructure</h2>
+      <br>
+      <div>
+        <p class="ov-community-paragraph">
+        Our project infrastructure can always benefit from extra people, hardware and network bandwidth. First of all, consider <a href="https://ovirt.org/develop/infra/repository-mirrors.html">becoming a public mirror</a> of oVirt repositories. You can also <a href="https://ovirt.org/develop/infra/repository-mirrors.html">become an infrastructure team member</a> or <a href="https://ovirt.org/community/get-involved/donate-hardware.html">donate hardware</a> to the project to improve our capacity and redundancy.
         </p>    
       </div>  
     </section>
 
     <section class="ov-site-section ov-masthead--community">
-      <h2 class="ov-heading ov-heading--lg">Meet Our Users and Supporters</h2>
+      <h2 class="ov-heading ov-heading--lg">Supporters, Sponsors, and Providers</h2>
       <br>
       <div>
-        <p>
-         oVirt is made up of a broad community of supporters, sponsors, and users. Find out more about our valued community.
+        <p class="ov-community-paragraph">
+         oVirt has a broad community of <a href="https://ovirt.org/community/user-stories/users-and-providers.html">supporters, sponsors, and providers</a>.
         </p>    
       </div>  
     </section>
 
     <section class="ov-site-section ov-masthead--community">
-      <h2 class="ov-heading ov-heading--lg">Get Social with oVirt</h2>
+      <h2 class="ov-heading ov-heading--lg">Social Media</h2>
       <br>
-      <div>
-        <p>
-          Keep track of the latest happenings in the oVirt community, such as new releases, and post your thoughts and links on virtualization-related topics.
-        </p>  
-        <br>   
+      <div> 
         <p>
           Follow us on: 
         </p>
-        <ul style="list-style-type:disc;">
+        <ul style="list-style-type:disc; "class="ov-community-list">
           <li>
-            Twitter
+            <a href="https://twitter.com/ovirt">Twitter</a>
           </li>
           <li>
-            Facebook
+            <a href="https://www.facebook.com/groups/ovirt.openvirtualization/">Facebook</a>
           </li>
           <li>
-           YouTube
-          </li>
-          <li>
-           Reddit
+           <a href="https://www.youtube.com/user/ovirtproject">YouTube</a>
           </li>
         </ul>
       </div>
     </section>
 
     <section class="ov-site-section ov-masthead--community">
-      <h2 class="ov-heading ov-heading--lg">Community Governance & Structure</h2>
+      <h2 class="ov-heading ov-heading--lg">Community Projects Related to oVirt</h2>
       <br>
       <div>
-        <p>
-          oVirt is an open source project that is openly governed. Learn how projects can be added and who is on the board.
-        </p>    
+        <p class="ov-community-paragraph">
+          oVirt community shares scripts, tools, add-ons and plugins that didn’t reach enough interest or stability to get included into the oVirt project. You can find some of them listed here:
+        </p>
+        <ul style="list-style-type:disc; "class="ov-community-list">
+          <li>
+            <a href="https://github.com/nkovacne/ovirt-storage-balancer">oVirt storage balancer</a>
+          </li>
+          <li>
+            <a href="https://github.com/zipurman/oVIRT_Simple_Backup">oVirt Simple Backup</a>
+          </li>
+          <li>
+           <a href="https://github.com/nkovacne/ovirt-desktop-client">oVirt Desktop Client</a>
+          </li>
+          <li>
+           <a href="https://github.com/yuvalturg/ovirtfs">oVirt filesystem in userspace</a>
+          </li>
+        </ul>    
       </div>  
     </section>
 

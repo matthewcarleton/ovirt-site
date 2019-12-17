@@ -530,6 +530,22 @@ button:-moz-focusring,
       grid-column-end: 4;
       justify-self: end; } }
 
+.ov-community {
+  display: flex;
+  flex-direction: column; }
+  .ov-community > *:not(:last-child) {
+    margin-bottom: var(--ov--spacer--md); }
+
+.ov-masthead--community {
+  background-image: url(oVirt_Community_Header.png); }
+
+.ov-community-paragraph {
+  max-width: 1080px; }
+
+.ov-community-list {
+  max-width: 1080px;
+  margin-left: 30px; }
+
 .ov-main {
   margin-top: var(--ov--menu-offset); }
 
