@@ -537,7 +537,11 @@ button:-moz-focusring,
     margin-bottom: var(--ov--spacer--md); }
 
 .ov-masthead--community {
-  background-image: url(oVirt_Community_Header.png); }
+  background-image: url("/images/oVirt_Community_Header.png") left top no-repeat var(--ov--color-brand--100); }
+  .ov-masthead--community .ov-heading--lg {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto; }
 
 .ov-community-paragraph {
   max-width: 1080px; }
@@ -545,6 +549,9 @@ button:-moz-focusring,
 .ov-community-list {
   max-width: 1080px;
   margin-left: 30px; }
+
+.ov-404-background {
+  background: url("/images/oVirt_404.png"); }
 
 .ov-main {
   margin-top: var(--ov--menu-offset); }
