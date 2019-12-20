@@ -185,13 +185,6 @@ button:-moz-focusring,
   .ov-heading--2xl {
     font-size: var(--ov--FontSize--2xl); } }
 
-.ov-masthead--blog {
-  background-image: url("/images/oVirt_Blog_BG_Overlay.png") left top no-repeat var(--ov--color-brand--100); }
-  .ov-masthead--blog .ov-heading--lg {
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto; }
-
 .ov-header-main {
   background: var(--ov--color-brand--200);
   display: grid;
@@ -543,15 +536,10 @@ button:-moz-focusring,
     margin-left: auto;
     margin-right: auto; }
 
-.ov-community-paragraph {
-  max-width: 1080px; }
-
-.ov-community-list {
+.ov-content-styles {
   max-width: 1080px;
-  margin-left: 30px; }
-
-.ov-404--background {
-  background-image: url("/images/oVirt_404.png"); }
+  list-style-type: disc;
+  margin: var(--ov--spacer--sm); }
 
 .ov-main {
   margin-top: var(--ov--menu-offset); }
