@@ -1,10 +1,3 @@
-.ov-community {
-    display:flex;
-    flex-direction: column;
-    > *:not(:last-child) {
-    margin-bottom: var(--ov--spacer--md);
-    }
-    }
 
 .ov-masthead--community {
 	    background: url('/images/oVirt_Community_Header.png') left top no-repeat var(--ov--color-brand--100);
@@ -19,13 +12,12 @@
 	max-width: 1080px; 
     list-style-type: disc;
     margin: var(--ov--spacer--sm);
-    }    
-
-.ov-site-section {
     padding: var(--ov--spacer--sm);
-    @media (min-width: $ov--breakpoint--lg){
-     padding: var(--ov--spacer--md);
-    }
+    @media (min-width: $ov--breakpoint--lg)
+        {padding: var(--ov--spacer--md);
+        }
+    }    
+   
 
 .ov-community-subsection {
     margin: var(--ov--spacer--sm);

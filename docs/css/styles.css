@@ -523,12 +523,6 @@ button:-moz-focusring,
       grid-column-end: 4;
       justify-self: end; } }
 
-.ov-community {
-  display: flex;
-  flex-direction: column; }
-  .ov-community > *:not(:last-child) {
-    margin-bottom: var(--ov--spacer--md); }
-
 .ov-masthead--community {
   background: url("/images/oVirt_Community_Header.png") left top no-repeat var(--ov--color-brand--100); }
   .ov-masthead--community .ov-heading--lg {
@@ -539,6 +533,13 @@ button:-moz-focusring,
 .ov-content-styles {
   max-width: 1080px;
   list-style-type: disc;
+  margin: var(--ov--spacer--sm);
+  padding: var(--ov--spacer--sm); }
+  @media (min-width: 992px) {
+    .ov-content-styles {
+      padding: var(--ov--spacer--md); } }
+
+.ov-community-subsection {
   margin: var(--ov--spacer--sm); }
 
 .ov-main {
