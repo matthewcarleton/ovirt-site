@@ -532,18 +532,18 @@ button:-moz-focusring,
 
 .ov-layout-styles {
   margin: var(--ov--spacer--sm);
-  padding: var(--ov--spacer--sm); }
+  padding: var(--ov--spacer--sm);
+  max-width: 1080px; }
   @media (min-width: 992px) {
     .ov-layout-styles {
       padding: var(--ov--spacer--md); } }
 
-.ov-content-styles {
-  max-width: 1080px;
-  list-style-type: disc;
+.ov-p-styles {
   padding: var(--ov--spacer--sm); }
 
-.ov-community-subsection {
-  margin: var(--ov--spacer--sm); }
+.ov-ul-styles {
+  list-style-type: disc;
+  padding: var(--ov--spacer--sm); }
 
 .ov-main {
   margin-top: var(--ov--menu-offset); }
