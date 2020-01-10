@@ -538,10 +538,10 @@ button:-moz-focusring,
     .ov-layout-styles {
       padding: var(--ov--spacer--md); } }
 
-.ov-p-styles {
+.ov-content-styles p {
   padding: var(--ov--spacer--sm); }
 
-.ov-ul-styles {
+.ov-content-styles ul {
   list-style-type: disc;
   padding: var(--ov--spacer--sm); }
 

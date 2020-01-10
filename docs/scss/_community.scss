@@ -17,12 +17,10 @@
         }
 }
    
-.ov-p-styles {
-    padding: var(--ov--spacer--sm);
-}         
 
-.ov-ul-styles {
-        list-style-type: disc;
-        padding: var(--ov--spacer--sm);
-}
-      
+.ov-content-styles {
+    p {padding: var(--ov--spacer--sm); }
+
+    ul {list-style-type: disc;
+    padding: var(--ov--spacer--sm); }
+}      
