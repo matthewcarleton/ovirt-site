@@ -1,10 +1,13 @@
 .ov-masthead--home {
+    background: url('/images/oVirt_About_BG_Overlay.png') left top no-repeat var(--ov--color-brand--100);
     .ov-heading--lg {
         max-width: 400px;
         margin-left: auto;
         margin-right: auto;
     }
 }
+
+
 
 .ov-community-power {
     text-align: center;

@@ -3,7 +3,6 @@
 }
 
 .ov-masthead {
-    background: url('/images/oVirt_About_BG_Overlay.png') left top no-repeat var(--ov--color-brand--100);
     background-size: cover;
     padding: var(--ov--spacer--sm);
     text-align: center;
@@ -26,6 +25,8 @@
     }
 
 }//masthead
+
+
 
 .ov-site-section {
     padding: var(--ov--spacer--sm);
