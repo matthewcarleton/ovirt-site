@@ -95,18 +95,15 @@
 
     <section class="ov-layout-styles ov-content-styles">
       <h2 class="ov-heading ov-heading--lg">Download and Install Self-Hosted Engine</h2>
-      <div>
         <p>
         For production installations, we recommend installing oVirt using the Self-Hosted Engine configuration. In this configuration, oVirt Engine and a Host are installed together with the Engine running as a Virtual Machine on that Host. This configuration is more resilent because the Engine Virtual Machine will be highly available (once a second Host is added). See the Self-Hosted Engine Guide for full installation instructions for this configuration.
 
         oVirt Self-Hosted Engine is installed using a graphical installer in Cockpit. Cockpit is enabled by default on oVirt Nodes (see below). If you are using a Enterprise Linux Host, see Installing Cockpit on Enterprise Linux Hosts in the Installation Guide.
-        </p>  
-      </div>  
+        </p>   
     </section>
 
     <section class="ov-layout-styles ov-content-styles">
       <h2 class="ov-heading ov-heading--lg">Red Hat Enterprise Linux, CentOS Linux</h2>
-      <div>
        <ol>
          <li> Enable the Base, Optional, and Extra repositories (they are enabled by default on CentOS). </li>
          On Red Hat Enterprise Linux you'll need a valid subscription and the following repositories enabled:
@@ -122,12 +119,10 @@
          <li>Install cockpit-ovirt-dashboard.</li> 
          (add code snippet)
        </ol>
-      </div>  
     </section>
 
     <section class="ov-layout-styles ov-content-styles">
       <h2 class="ov-heading ov-heading--lg">Install oVirt Self-Hosted Engine</h2>
-      <div>
        <ol>
          <li>Log in to Cockpit at https://[Host IP or FQDN]:9090 and click Virtualization → Hosted Engine.</li>
          <li>Click Start under the Hosted Engine option.</li>
@@ -135,27 +130,22 @@
          <li>Once the installation completes, oVirt’s web UI management interface will start. Browse to https://[Hosted Engine’s name]/ to begin using oVirt!</li>
             *See Browsers and Mobile Clients for supported browsers and mobile client information.*
         </ol>
-      </div>
     </section>
 
     <section class="ov-layout-styles ov-content-styles">
       <h2 class="ov-heading ov-heading--lg">Download oVirt Engine</h2>
-      <div>
-        <p>
-        If you prefer not to use oVirt Self-Hosted Engine, you can install oVirt Engine and Nodes / Hosts separately.
+        <p>If you prefer not to use oVirt Self-Hosted Engine, you can install oVirt Engine and Nodes / Hosts separately.
         Our recommended method of installing oVirt Engine is to use the software packages for a supported Enterprise Linux 7 distribution, such as CentOS Linux or Red Hat Enterprise Linux.
         (insert warning box with message here)</p>
       
         <p><b>Important:</b> You cannot skip a version when updating oVirt Engine. For example, if you are updating from 3.6 to 4.2, you first need to update to 4.0, then to 4.1, and finally to 4.2. If you're updating from a previous version, be sure to have the latest release repository installed by running.</p>
 
         <p>(Insert code snippet)</p>
-         
-      </div>  
+           
     </section>
 
     <section class="ov-layout-styles ov-content-styles">
       <h2 class="ov-heading ov-heading--lg">Red Hat Enterprise Linux, CentOS Linux</h2>
-      <div>
        <ol>
          <li>Ensure that you have required repositories for your distribution.</li>
          <p>
@@ -178,12 +168,10 @@
         <li>Once the installation completes, oVirt's web UI management interface will start and the URL will be printed to the screen. Browse to this URL to begin using oVirt!</li>
         <p>See Browsers and Mobile Clients for supported browsers and mobile client information.</p>
       </ol>
-     </div>
     </section>
 
     <section class="ov-layout-styles ov-content-styles">
       <h2 class="ov-heading ov-heading--lg">Download oVirt Node or Setup Hosts</h2>
-      <div>
         <p>If you installed standalone oVirt Engine, you'll now need to install at least one Node or Host. If you installed oVirt Self-Hosted Engine, you already have one Host, but you may want another for access to enterprise features like migration and high availability.</p>
         <p>oVirt supports two types of Hosts:</p>
         <ul>
@@ -191,12 +179,10 @@
           <li>Enterprise Linux (such as CentOS or RHEL)</li>
         </ul>
         <p>Depending on your environment requirements, you may want to use one type only or both in your oVirt environment. It is recommended that you install and attach at least two Hosts to the oVirt environment. If you attach only one Host, you will be unable to access features such as migration and high availability.</p>
-      </div>
     </section>
 
     <section class="ov-layout-styles ov-content-styles">
     <h2 class="ov-heading ov-heading--lg">Download oVirt Node</h2>
-     <div>
         <p>oVirt Node is a minimal operating system based on CentOS that is designed to provide a simple method for setting up a physical machine to act as a hypervisor in an oVirt environment.</p>
 
         <p>See Chapter 6: oVirt Nodes in the Installation Guide for full installation instructions.</p>
@@ -208,12 +194,10 @@
             <li>Boot your physical machine from that media and install the oVirt Node minimal operating system.</li>
             <li>Follow the instructions in Adding a Host to the oVirt Engine to add your Node to the Engine.</li>
           </ol>   
-      </div>
     </section>
 
     <section class="ov-layout-styles ov-content-styles">
     <h2 class="ov-heading ov-heading--lg">Setup a Host</h2>
-     <div>
         <p>Instead of or in addition to oVirt Node, you can use a standard Enterprise Linux installation as a Host. An Enterprise Linux Host (such as CentOS or RHEL), also known as an EL-based hypervisor or EL-based Host, is a standard basic installation of an Enterprise Linux operating system on a physical server upon which the hypervisor packages are installed.</p>
 
         <p>See Chapter 7: Enterprise Linux Hosts for full installation instructions.</p>
@@ -226,12 +210,10 @@
             (insert code snippet)
             <li>Follow the instructions in Adding a Host to the oVirt Engine to add your Host to the Engine. This will automatically install the hypervisor packages on the Host.</li>
           </ol>  
-      </div>
     </section>
 
     <section class="ov-layout-styles ov-content-styles">
     <h2 class="ov-heading ov-heading--lg">Storage</h2>
-     <div>
         <p>oVirt uses a centralized storage system for Virtual Machine disk images, ISO files, and snapshots. Before you can install a Virtual Machine, storage must be attached.</p>
         
         <p>Storage can be implemented using:</p>
@@ -246,12 +228,10 @@
           </ul>
 
         <p>See Configuring Storage and Storage Administration for guidance on configuring storage for your environment.</p>
-      </div>
     </section>
 
     <section class="ov-layout-styles ov-content-styles">
     <h2 class="ov-heading ov-heading--lg">Install Virtual Machines</h2>
-     <div>
         <p>Once oVirt Engine is installed and you have added Hosts and configured storage, you can now install Virtual Machines!</p>
 
         <p>See the Virtual Machine Management Guide for complete instructions.</p>
@@ -504,26 +484,21 @@
 
   <section class="ov-layout-styles ov-content-styles">
     <h2 class="ov-heading ov-heading--lg">Consoles</h2>
-     <div>
       <p>A console is a graphical window that allows you to view the start up screen, shut down screen, and desktop of a Virtual Machine, and to interact with that Virtual Machine in a similar way to a physical machine. In oVirt, the default application for opening a console to a virtual machine is Remote Viewer, which must be installed on the client machine (for example, the end user or administrator's laptop). For Windows virtual machines, Remote Desktop Protocol is also available.</p>
 
       <p>See Installing Console Components for installation instructions.</p>  
-    </div>
+
   </section>
 
     <section class="ov-layout-styles ov-content-styles">
     <h2 class="ov-heading ov-heading--lg">Browser Based</h2>
-     <div>
         <p>There is also a browser-based console available. In the Console Options dialog for the Virtual Machine, select noVNC. See VNC Console Options and and Browser Support and Mobile Clients for more information.</p>
-    </div>
   </section>
 
   <section class="ov-layout-styles ov-content-styles">
     <h2 class="ov-heading ov-heading--lg">RPM Repositories and GPG keys</h2>
-     <div>
         <p>RPM repository for oVirt 4.2 - Latest stable release</p>
         <p>See RPMs and GPG for older releases, nightlies, mirrors, and GPG keys.</p>
-    </div>
   </section>
 
 </main>
