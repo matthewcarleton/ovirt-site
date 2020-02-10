@@ -427,7 +427,7 @@ button:-moz-focusring,
     left: 0; } }
 
 .ov-footer-main {
-  background: var(--ov--color-brand--100);
+  background: var(--ov--color-brand--200);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -453,10 +453,12 @@ button:-moz-focusring,
       height: 20px;
       margin-right: var(--ov--spacer--xs); }
 
-.ov-masthead--home .ov-heading--lg {
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto; }
+.ov-masthead--home {
+  background: url("/images/oVirt_About_BG_Overlay.png") left top no-repeat var(--ov--color-brand--100); }
+  .ov-masthead--home .ov-heading--lg {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto; }
 
 .ov-community-power {
   text-align: center; }
@@ -521,9 +523,13 @@ button:-moz-focusring,
       grid-column-end: 4;
       justify-self: end; } }
 
+
 .ov-masthead--download {
   background: url("/images/oVirt_Download_BG_Overlay.png") left top no-repeat var(--ov--color-brand--100); }
   .ov-masthead--download .ov-heading--lg {
+.ov-masthead--community {
+  background: url("/images/oVirt_Community_Header.png") left top no-repeat var(--ov--color-brand--100); }
+  .ov-masthead--community .ov-heading--lg {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto; }
@@ -547,7 +553,6 @@ button:-moz-focusring,
   margin-top: var(--ov--menu-offset); }
 
 .ov-masthead {
-  background: url("/images/oVirt_About_BG_Overlay.png") left top no-repeat var(--ov--color-brand--100);
   background-size: cover;
   padding: var(--ov--spacer--sm);
   text-align: center; }

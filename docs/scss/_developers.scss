@@ -1,0 +1,14 @@
+.ov-masthead--developers {
+	margin: var(--ov--spacer--sm);
+    padding: var(--ov--spacer--sm);
+}
+
+.ov-content-styles {
+	max-width: 1080px; 
+    list-style-type: disc;
+    margin: var(--ov--spacer--sm);
+    padding: var(--ov--spacer--sm);
+    @media (min-width: $ov--breakpoint--lg)
+        {padding: var(--ov--spacer--md);
+        }
+    }  
