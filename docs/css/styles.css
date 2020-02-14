@@ -531,7 +531,7 @@ button:-moz-focusring,
     margin-right: auto; }
 
 .ov-layout-styles {
-  margin: var(--ov--spacer--sm);
+  margin: var(--ov--spacer--md);
   padding: var(--ov--spacer--sm);
   max-width: 1080px; }
   @media (min-width: 992px) {
@@ -541,8 +541,26 @@ button:-moz-focusring,
 .ov-content-styles p {
   padding: var(--ov--spacer--sm); }
 
+.ov-content-styles ol {
+  padding: var(--ov--spacer--sm); }
+
 .ov-content-styles ul {
   list-style-type: disc;
+  padding: var(--ov--spacer--sm); }
+
+.ov-content-styles h2 {
+  padding: var(--ov--spacer--sm); }
+
+.ov-content-styles table {
+  padding: var(--ov--spacer--sm); }
+
+.ov-content-styles th {
+  padding: var(--ov--spacer--sm); }
+
+.ov-content-styles tr {
+  padding: var(--ov--spacer--sm); }
+
+.ov-content-styles td {
   padding: var(--ov--spacer--sm); }
 
 .ov-masthead--community {

@@ -10,7 +10,7 @@
 
 .ov-layout-styles 
 {
-    margin: var(--ov--spacer--sm);
+    margin: var(--ov--spacer--md);
     padding: var(--ov--spacer--sm);
     max-width: 1080px; 
     @media (min-width: $ov--breakpoint--lg)
@@ -24,7 +24,25 @@
     p 
     {padding: var(--ov--spacer--sm); }
 
+    ol
+    {padding: var(--ov--spacer--sm);}
+
     ul 
     {list-style-type: disc;
     padding: var(--ov--spacer--sm); }
+
+    h2
+    {padding: var(--ov--spacer--sm);}
+
+    table
+    {padding: var(--ov--spacer--sm);}
+
+    th
+    {padding: var(--ov--spacer--sm);}
+
+    tr
+    {padding: var(--ov--spacer--sm);}
+
+    td
+    {padding: var(--ov--spacer--sm);}
 } 
