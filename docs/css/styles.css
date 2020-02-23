@@ -523,6 +523,46 @@ button:-moz-focusring,
       grid-column-end: 4;
       justify-self: end; } }
 
+.ov-masthead--download {
+  background: url("/images/oVirt_Download_BG_Overlay.png") left top no-repeat var(--ov--color-brand--100); }
+  .ov-masthead--download .ov-heading--lg {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto; }
+
+.ov-layout-styles {
+  margin: var(--ov--spacer--md);
+  padding: var(--ov--spacer--sm);
+  max-width: 1080px; }
+  @media (min-width: 992px) {
+    .ov-layout-styles {
+      padding: var(--ov--spacer--md); } }
+
+.ov-content-styles p {
+  padding: var(--ov--spacer--sm); }
+
+.ov-content-styles ol {
+  padding: var(--ov--spacer--sm); }
+
+.ov-content-styles ul {
+  list-style-type: disc;
+  padding: var(--ov--spacer--sm); }
+
+.ov-content-styles h2 {
+  padding: var(--ov--spacer--sm); }
+
+.ov-content-styles table {
+  padding: var(--ov--spacer--sm); }
+
+.ov-content-styles th {
+  padding: var(--ov--spacer--sm); }
+
+.ov-content-styles tr {
+  padding: var(--ov--spacer--sm); }
+
+.ov-content-styles td {
+  padding: var(--ov--spacer--sm); }
+
 .ov-masthead--community {
   background: url("/images/oVirt_Community_Header.png") left top no-repeat var(--ov--color-brand--100); }
   .ov-masthead--community .ov-heading--lg {
